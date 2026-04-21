@@ -25,7 +25,7 @@ const SLIDES = [
   {
     eyebrow: "TÍCH XANH — BOOKING BÁO PR",
     title: "Định vị thương hiệu mọi nền tảng",
-    desc: "Tích Xanh Facebook / TikTok / Instagram. Đăng bài VNExpress, VTV, Zing, Thanh Niên.",
+    desc: "Tích Xanh Facebook / TikTok / Instagram.\nĐăng bài VNExpress, VTV, Zing, Thanh Niên.",
     image: "/images/services/banner-dv2.jpg",
     overlay: "from-[#32373c]/85 via-[#1a1a1a]/75 to-[#000]/85",
   },
@@ -72,7 +72,7 @@ export default function HeroSlider() {
                     <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-5 drop-shadow-lg leading-[1.15] whitespace-pre-line">
                       {s.title}
                     </h1>
-                    <p className="text-[14px] sm:text-[15px] md:text-lg mb-6 md:mb-7 max-w-2xl mx-auto lg:mx-0 opacity-95 leading-relaxed">
+                    <p className="text-[14px] sm:text-[15px] md:text-lg mb-6 md:mb-7 max-w-2xl mx-auto lg:mx-0 opacity-95 leading-relaxed whitespace-pre-line">
                       {s.desc}
                     </p>
                     <div className="flex flex-wrap gap-2.5 md:gap-3 justify-center lg:justify-start">
