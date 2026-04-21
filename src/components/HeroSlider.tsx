@@ -17,7 +17,7 @@ const SLIDES = [
   },
   {
     eyebrow: "ĐỐI TÁC CAO CẤP NHẤT CỦA FACEBOOK",
-    title: "Tài khoản quảng cáo bền bỉ",
+    title: "Tài khoản quảng cáo\nbền bỉ",
     desc: "Đội ngũ Support Facebook đồng hành cùng bạn 24/7. Phí quản lý chỉ từ 3%.",
     image: "/images/services/banner-dv1.jpg",
     overlay: "from-[#0f7ac2]/85 via-[#1d98e8]/70 to-[#062f73]/90",
@@ -69,7 +69,7 @@ export default function HeroSlider() {
                 <div className="container-x relative z-10 py-14 md:py-20">
                   <div className="max-w-3xl mx-auto text-center lg:text-left lg:mx-0">
                     <div className="hero-eyebrow">{s.eyebrow}</div>
-                    <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-5 drop-shadow-lg leading-[1.15]">
+                    <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-5 drop-shadow-lg leading-[1.15] whitespace-pre-line">
                       {s.title}
                     </h1>
                     <p className="text-[14px] sm:text-[15px] md:text-lg mb-6 md:mb-7 max-w-2xl mx-auto lg:mx-0 opacity-95 leading-relaxed">
