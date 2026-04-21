@@ -1,0 +1,126 @@
+export type NewsItem = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readTime: string;
+  variant: "orange" | "blue" | "purple" | "dark" | "light";
+  image: string;
+  content: string[];
+};
+
+export const NEWS: NewsItem[] = [
+  {
+    slug: "toi-uu-facebook-ads-2026",
+    title: "Tối ưu Facebook Ads 2026: 7 chiến lược CPM thấp, ROAS cao",
+    excerpt:
+      "Facebook thay đổi thuật toán — đây là 7 chiến lược thực chiến giúp giảm CPM và tăng ROAS cho chiến dịch của bạn trong năm 2026.",
+    category: "Facebook Ads",
+    date: "18/04/2026",
+    readTime: "8 phút đọc",
+    variant: "orange",
+    image: "/images/news/news-1.jpg",
+    content: [
+      "Thị trường quảng cáo Facebook năm 2026 có nhiều biến động với việc Meta siết chặt chính sách privacy và thay đổi đáng kể cơ chế bidding. Để chiến dịch đạt hiệu quả, marketer cần thay đổi tư duy và chiến thuật.",
+      "1. Tập trung vào Conversions API (CAPI): với iOS 17+ và các trình duyệt chặn tracking, CAPI giờ là bắt buộc. Không có CAPI, data trả về Facebook thiếu hụt tới 40%, làm giảm hiệu quả tối ưu.",
+      "2. Broad Targeting kết hợp AI: Thả rộng target theo tuổi/giới tính, để AI của Facebook tự tìm khách hàng dựa trên pixel. Kết quả thường tốt hơn target cứng.",
+      "3. Advantage+ Shopping Campaigns: Đây là format mới ưu tiên của Facebook — CPA thấp hơn 30% so với chiến dịch thường.",
+      "4. Chú trọng Creative: 70% hiệu quả đến từ creative. Đầu tư vào video ngắn 15-30s, thumbnail bắt mắt, hook 3s đầu.",
+      "5. Đa dạng ad placement: Stories, Reels, Feed — mỗi nơi cần format riêng. Không tái sử dụng 1 creative cho mọi vị trí.",
+      "6. Budget Optimization cấp Campaign (CBO): Để Facebook tự phân bổ budget giữa các ad set thay vì bạn chia tay.",
+      "7. Đo lường dài hạn: Đừng tối ưu theo CPA từng ngày — hãy nhìn ROAS 28-90 ngày để ra quyết định.",
+    ],
+  },
+  {
+    slug: "tich-xanh-facebook-dn-vn",
+    title: "Tích xanh Facebook cho doanh nghiệp Việt: Quy trình & chi phí 2026",
+    excerpt:
+      "Bước đi đầu tiên để định vị thương hiệu cao cấp. Hướng dẫn đầy đủ quy trình xin tích xanh Facebook, chi phí, thời gian và tỉ lệ thành công.",
+    category: "Branding",
+    date: "12/04/2026",
+    readTime: "6 phút đọc",
+    variant: "blue",
+    image: "/images/news/news-2.jpg",
+    content: [
+      "Tích xanh (Verified Badge) là dấu tick màu xanh xuất hiện cạnh tên tài khoản Facebook, TikTok, Instagram. Đây là xác nhận của nền tảng rằng đây là tài khoản chính thức, đáng tin cậy.",
+      "Lợi ích của tích xanh: tăng độ tin cậy với khách hàng, ưu tiên hiển thị trong search, bảo vệ khỏi tài khoản giả mạo, tăng tỉ lệ chuyển đổi 15-30%.",
+      "Điều kiện cơ bản: Tài khoản đã hoạt động ổn định ít nhất 3-6 tháng, có đủ bài đăng và tương tác thực, có website chính thức và thông tin doanh nghiệp minh bạch.",
+      "Quy trình thực hiện gồm 4 bước: chuẩn bị hồ sơ doanh nghiệp → nộp đơn qua hệ thống Meta → xác minh qua báo chí/truyền thông → nhận kết quả trong 5-15 ngày làm việc.",
+      "Chi phí trung bình: Facebook từ 60 triệu, TikTok từ 80 triệu, Instagram từ 70 triệu. Biển Đông Media cam kết hoàn phí 100% nếu không đạt kết quả.",
+    ],
+  },
+  {
+    slug: "tiktok-shop-2026-xu-huong",
+    title: "TikTok Shop Việt Nam 2026: Xu hướng & cơ hội bùng nổ",
+    excerpt:
+      "TikTok Shop đang trở thành kênh bán hàng số 1 cho nhà bán lẻ Việt Nam. Phân tích xu hướng, insight người dùng và chiến lược thắng 2026.",
+    category: "TikTok",
+    date: "05/04/2026",
+    readTime: "7 phút đọc",
+    variant: "purple",
+    image: "/images/news/news-3.jpg",
+    content: [
+      "TikTok Shop Việt Nam đã vượt mốc 10 tỷ USD GMV năm 2025, trở thành sàn thương mại điện tử tăng trưởng nhanh nhất. Xu hướng sẽ tiếp tục mạnh trong 2026.",
+      "Đặc điểm người dùng TikTok Shop: 65% nữ, độ tuổi 18-35, thích mua hàng qua livestream, ra quyết định nhanh, ưu tiên giá rẻ + feedback trực quan.",
+      "Ngành hàng hot: thời trang nữ, mỹ phẩm, gia dụng, thực phẩm ăn liền, phụ kiện điện thoại. Ngành chậm: đồ công nghệ cao, xa xỉ.",
+      "Chiến lược thắng 2026: đầu tư livestream dày (5-8 buổi/ngày), creative ngắn 15-30s, hợp tác KOCs micro, tận dụng TikTok Ads để boost livestream.",
+      "Biển Đông Media hỗ trợ nhà bán hàng TikTok: account quảng cáo TikTok Ads, booking KOCs, chạy campaign booster, tư vấn nội dung.",
+    ],
+  },
+  {
+    slug: "kols-2026-ban-hang",
+    title: "KOLs vs KOCs 2026: Nên đầu tư vào ai để bán hàng?",
+    excerpt:
+      "So sánh chi tiết KOLs và KOCs — ROI thực tế, chi phí, độ tin cậy. Hướng dẫn chọn influencer phù hợp ngân sách và mục tiêu doanh nghiệp.",
+    category: "Influencer",
+    date: "28/03/2026",
+    readTime: "5 phút đọc",
+    variant: "dark",
+    image: "/images/news/news-4.jpg",
+    content: [
+      "KOLs (Key Opinion Leaders) là những người có lượng follower lớn (từ 500k+), thường là KOL nổi tiếng, người của công chúng. KOCs (Key Opinion Consumers) là người tiêu dùng có ảnh hưởng nhỏ (10k-100k follower), chuyên review sản phẩm.",
+      "Chi phí trung bình: KOLs Tier A (1M+ follower) từ 50-300 triệu/post, Tier B (500k-1M) 15-50 triệu. KOCs chỉ 500k-5 triệu/post.",
+      "Độ tin cậy: KOCs được đánh giá chân thực hơn — họ review sản phẩm thực sự dùng. KOLs đôi khi bị cho là quảng cáo.",
+      "Ngành phù hợp KOLs: brand cao cấp, launching sản phẩm, xây dựng awareness. Ngành phù hợp KOCs: sản phẩm tiêu dùng, thương mại điện tử, cần chứng minh chất lượng.",
+      "Chiến thuật kết hợp hay dùng: 1-2 KOLs để tạo hype + 20-50 KOCs để tạo social proof. ROI thường cao hơn chỉ dùng KOLs.",
+    ],
+  },
+  {
+    slug: "google-ads-search-2026",
+    title: "Google Ads Search 2026: Tối ưu cho AI Overviews & ZCS",
+    excerpt:
+      "Google tích hợp AI Overviews vào kết quả search — cách marketer thích nghi để không mất traffic và tối ưu Google Ads hiệu quả.",
+    category: "Google Ads",
+    date: "20/03/2026",
+    readTime: "6 phút đọc",
+    variant: "light",
+    image: "/images/news/news-1.jpg",
+    content: [
+      "Google AI Overviews (tóm tắt AI) đang thay đổi hành vi search — người dùng nhận câu trả lời ngay trên SERP, không click vào website. Tỉ lệ Zero Click Search (ZCS) tăng 35%.",
+      "Tác động với Google Ads: vị trí ads bị đẩy xuống dưới AI Overview, CTR giảm trung bình 15-20% cho từ khoá info.",
+      "Giải pháp 1: Tập trung từ khoá commercial (có ý định mua) — ít bị ảnh hưởng bởi AI Overview.",
+      "Giải pháp 2: Sử dụng Performance Max — format mới kết hợp Search, Display, Shopping, YouTube.",
+      "Giải pháp 3: Tăng cường Landing Page conversion. Mất CTR thì cần tăng tỉ lệ chuyển đổi để bù.",
+      "Giải pháp 4: Đầu tư vào First-Party Data và customer matching — thay vì phụ thuộc vào cookie.",
+    ],
+  },
+  {
+    slug: "instagram-reels-marketing-2026",
+    title: "Instagram Reels Marketing 2026: Cách tiếp cận Gen Z hiệu quả",
+    excerpt:
+      "Reels đang là trung tâm của Instagram. Hướng dẫn xây dựng chiến lược Reels marketing để chinh phục khách hàng Gen Z.",
+    category: "Instagram",
+    date: "15/03/2026",
+    readTime: "5 phút đọc",
+    variant: "orange",
+    image: "/images/news/news-2.jpg",
+    content: [
+      "Instagram Reels chiếm 50% thời gian người dùng trên Instagram năm 2026. Thuật toán ưu tiên Reels hơn post tĩnh và stories.",
+      "Đặc điểm Reel hiệu quả: thời lượng 15-30s, hook 3s đầu cực mạnh, caption ngắn có CTA, sử dụng trending audio.",
+      "Chiến lược content: 60% giải trí/giáo dục, 30% behind-the-scenes & user-generated content, 10% bán hàng/promo.",
+      "Collaborate với micro-influencer (10k-100k follower) — chi phí thấp, engagement cao, phù hợp Gen Z.",
+      "Instagram Shopping tích hợp với Reels — cho phép tag sản phẩm trực tiếp. Sử dụng triệt để để shortlink từ Reel đến checkout.",
+    ],
+  },
+];
