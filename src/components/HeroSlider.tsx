@@ -18,7 +18,7 @@ const SLIDES = [
   {
     eyebrow: "ĐỐI TÁC CAO CẤP NHẤT CỦA FACEBOOK",
     title: "Tài khoản quảng cáo\nbền bỉ",
-    desc: "Đội ngũ Support Facebook đồng hành cùng bạn 24/7. Phí quản lý chỉ từ 3%.",
+    desc: "Đội ngũ Support Facebook đồng hành cùng bạn 24/7. Phí quản lý chỉ từ 6%.",
     image: "/images/services/banner-dv1.jpg",
     overlay: "from-[#0f7ac2]/85 via-[#1d98e8]/70 to-[#062f73]/90",
   },

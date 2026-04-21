@@ -14,7 +14,7 @@ const PACKAGES = [
   {
     name: "Cơ bản",
     subtitle: "Phù hợp SME, shop online",
-    price: "5%",
+    price: "10%",
     priceNote: "Phí quản lý",
     features: [
       "Tài khoản Facebook VIA",
@@ -28,7 +28,7 @@ const PACKAGES = [
   {
     name: "Chuyên nghiệp",
     subtitle: "Phù hợp doanh nghiệp vừa",
-    price: "4%",
+    price: "8%",
     priceNote: "Phí quản lý",
     features: [
       "Tài khoản Facebook BM / Agency",
@@ -43,7 +43,7 @@ const PACKAGES = [
   {
     name: "Doanh nghiệp",
     subtitle: "Phù hợp tập đoàn, thương hiệu lớn",
-    price: "3%",
+    price: "6%",
     priceNote: "Phí quản lý",
     features: [
       "Tài khoản BM / Agency cao cấp",

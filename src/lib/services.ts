@@ -15,8 +15,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "thue-tai-khoan-quang-cao": {
     slug: "thue-tai-khoan-quang-cao",
     title: "Thuê tài khoản Quảng cáo",
-    subtitle: "Facebook, TikTok, Google — phí quản lý chỉ từ 3%",
-    price: "Từ 3% phí quản lý",
+    subtitle: "Facebook, TikTok, Google — phí quản lý chỉ từ 6%",
+    price: "Từ 6% phí quản lý",
     heroVariant: "orange",
     image: "/images/services/banner-dv1.jpg",
     intro:
@@ -27,7 +27,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
         text: "Tài khoản được tuyển chọn kỹ, có lịch sử chi tiêu tốt, ít bị khoá.",
       },
       {
-        title: "Phí quản lý từ 3%",
+        title: "Phí quản lý từ 6%",
         text: "Mức phí cạnh tranh nhất thị trường. Ngân sách càng cao phí càng thấp.",
       },
       {

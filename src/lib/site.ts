@@ -45,8 +45,8 @@ export const SERVICES = [
   {
     slug: "thue-tai-khoan-quang-cao",
     title: "Thuê tài khoản Quảng cáo",
-    short: "Facebook: Phí quản lý tài khoản: Chỉ từ 3%. Với sự phát triển mạnh mẽ…",
-    price: "Từ 3% phí quản lý",
+    short: "Facebook: Phí quản lý tài khoản: Chỉ từ 6%. Với sự phát triển mạnh mẽ…",
+    price: "Từ 6% phí quản lý",
     image: "/images/services/banner-dv1.jpg",
   },
   {
