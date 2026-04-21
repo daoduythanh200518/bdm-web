@@ -69,7 +69,7 @@ export default function HeroSlider() {
                 <div className="container-x relative z-10 py-14 md:py-20">
                   <div className="max-w-3xl mx-auto text-center lg:text-left lg:mx-0">
                     <div className="hero-eyebrow">{s.eyebrow}</div>
-                    <h1 className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-5 drop-shadow-lg leading-[1.15] whitespace-pre-line">
+                    <h1 className="text-[32px] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-5 leading-[1.1] whitespace-pre-line tracking-tight bg-gradient-to-br from-white via-amber-50 to-amber-200 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
                       {s.title}
                     </h1>
                     <p className="text-[14px] sm:text-[15px] md:text-lg mb-6 md:mb-7 max-w-2xl mx-auto lg:mx-0 opacity-95 leading-relaxed whitespace-pre-line">
