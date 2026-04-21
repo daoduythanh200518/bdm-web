@@ -53,19 +53,14 @@ Thay `<username>` và `<repo-name>` bằng thông tin thật.
 
 ---
 
-## Bước 3 — Mua domain & trỏ DNS
+## Bước 3 — Trỏ domain về Vercel
 
-### Mua domain (~200-400k/năm)
-
-- **Quốc tế**: Namecheap, GoDaddy, Cloudflare (cloudflare rẻ nhất)
-- **Việt Nam**: Mắt Bão, PAVietnam, Tenten (bắt buộc nếu muốn .vn)
-
-Khuyên: `.com` hoặc `.net`. Ví dụ `biendongmedia.net`.
+Domain đã có: **biendongmedia.vn**
 
 ### Trỏ domain về Vercel
 
 1. Trong Vercel project → **Settings → Domains → Add Domain**
-2. Nhập `biendongmedia.net` → Vercel sẽ hiện các DNS records cần thêm
+2. Nhập `biendongmedia.vn` → Vercel sẽ hiện các DNS records cần thêm
 3. Vào trang quản lý domain (nơi mua) → **DNS Management**
 4. Thêm 2 records:
 
@@ -82,7 +77,7 @@ Khuyên: `.com` hoặc `.net`. Ví dụ `biendongmedia.net`.
 
 1. Đăng ký tại https://resend.com (có gói miễn phí 3000 email/tháng, 100/ngày)
 
-2. **Domains → Add Domain** → nhập `biendongmedia.net`
+2. **Domains → Add Domain** → nhập `biendongmedia.vn`
 
 3. Resend sẽ cung cấp 3-4 DNS records (SPF, DKIM, Return-Path). Thêm vào DNS giống bước 3.
 
@@ -99,9 +94,9 @@ Vào project Vercel → **Settings → Environment Variables** → thêm 4 biế
 | Name | Value |
 |------|-------|
 | `RESEND_API_KEY` | `re_xxxxxxxxxxxxxxxxxxxxx` (lấy từ bước 4) |
-| `CONTACT_TO` | `hotro@biendongmedia.net` |
-| `CONTACT_FROM` | `Biển Đông Media <no-reply@biendongmedia.net>` |
-| `NEXT_PUBLIC_SITE_URL` | `https://biendongmedia.net` |
+| `CONTACT_TO` | `hotro@biendongmedia.vn` |
+| `CONTACT_FROM` | `Biển Đông Media <no-reply@biendongmedia.vn>` |
+| `NEXT_PUBLIC_SITE_URL` | `https://biendongmedia.vn` |
 
 Sau khi thêm → **Deployments → ... → Redeploy** để biến mới có hiệu lực.
 
@@ -109,9 +104,9 @@ Sau khi thêm → **Deployments → ... → Redeploy** để biến mới có hi
 
 ## Bước 6 — Kiểm tra sau deploy
 
-- [ ] Mở `https://biendongmedia.net` → hiện trang chủ
+- [ ] Mở `https://biendongmedia.vn` → hiện trang chủ
 - [ ] Check `/sitemap.xml` + `/robots.txt` có data đúng
-- [ ] Test form liên hệ → kiểm tra email có nhận được ở `hotro@biendongmedia.net`
+- [ ] Test form liên hệ → kiểm tra email có nhận được ở `hotro@biendongmedia.vn`
 - [ ] Kiểm tra responsive mobile/tablet/desktop
 - [ ] Google Search Console → submit sitemap để index
 

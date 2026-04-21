@@ -11,7 +11,7 @@ const schema = z.object({
   service: z.string().optional(),
 });
 
-const RECIPIENT = process.env.CONTACT_TO || "hotro@biendongmedia.net";
+const RECIPIENT = process.env.CONTACT_TO || "hotro@biendongmedia.vn";
 const FROM = process.env.CONTACT_FROM || "Biển Đông Media <onboarding@resend.dev>";
 
 export async function POST(req: Request) {
