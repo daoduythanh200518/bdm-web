@@ -25,7 +25,7 @@ const SLIDES = [
   {
     eyebrow: "TÍCH XANH — BOOKING BÁO PR",
     title: "Định vị thương hiệu mọi nền tảng",
-    desc: "Tích Xanh Facebook / TikTok / Instagram.\nĐăng bài VNExpress, VTV, Zing, Thanh Niên.",
+    desc: "Tích Xanh Facebook / TikTok / Instagram…\nĐăng bài VNExpress, VTV, Zing, Thanh Niên…",
     image: "/images/services/banner-dv2.jpg",
     overlay: "from-[#32373c]/85 via-[#1a1a1a]/75 to-[#000]/85",
   },
