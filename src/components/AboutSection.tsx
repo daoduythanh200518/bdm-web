@@ -36,9 +36,6 @@ export default function AboutSection() {
               Từ khi thành lập và hoạt động đến nay, Biển Đông Media luôn là cái tên được biết đến với sự uy tín, chuyên nghiệp, nhanh chóng, chính xác. Chúng tôi tự hào khi được công nhận là đối tác cao cấp nhất của Facebook.
             </p>
             <p>
-              Đây cũng chính là bước đệm để chúng tôi mang đến trải nghiệm tốt nhất cho các khách hàng, từ việc được hỗ trợ tận răng từ các nhân viên Support Facebook, đến cung cấp các tài khoản &ldquo;bền bỉ&rdquo;.
-            </p>
-            <p>
               Với định hướng: <strong>ổn định, lâu dài, tối ưu</strong>, khách hàng có thể hoàn toàn tin tưởng và yên tâm khi sử dụng các dịch vụ của Biển Đông Media.
             </p>
           </div>
