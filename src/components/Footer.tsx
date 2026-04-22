@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold mb-4 text-[15px]">
+          <h4 className="font-bold mb-4 text-[16px] tracking-wide bg-gradient-to-r from-white to-[var(--primary)] bg-clip-text text-transparent inline-block">
             Liên kết nhanh
           </h4>
           <ul className="space-y-2 text-[13px]">
@@ -42,7 +42,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold mb-4 text-[15px]">Dịch vụ</h4>
+          <h4 className="font-bold mb-4 text-[16px] tracking-wide bg-gradient-to-r from-white to-[var(--primary)] bg-clip-text text-transparent inline-block">
+            Dịch vụ
+          </h4>
           <ul className="space-y-2 text-[13px]">
             <li>
               <Link
@@ -80,7 +82,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold mb-4 text-[15px]">Liên hệ</h4>
+          <h4 className="font-bold mb-4 text-[16px] tracking-wide bg-gradient-to-r from-white to-[var(--primary)] bg-clip-text text-transparent inline-block">Liên hệ</h4>
           <ul className="space-y-3 text-[13px]">
             <li className="flex gap-2">
               <MapPin size={16} className="shrink-0 mt-0.5 text-[var(--primary)]" />
