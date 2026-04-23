@@ -20,21 +20,29 @@ export default function ServiceDetailView({ data }: { data: SD }) {
       <section className="section-y bg-white">
         <div className="container-x grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="max-w-[520px] mx-auto lg:max-w-none w-full">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+            <div
+              className={`relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] ${
+                data.imageFit === "contain" ? "bg-[#0a1930]" : ""
+              }`}
+            >
               <Image
                 src={data.image}
                 alt={data.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 520px"
-                className="object-cover"
+                className={data.imageFit === "contain" ? "object-contain" : "object-cover"}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
-                <div className="text-xs md:text-sm font-semibold uppercase tracking-wider opacity-90">
-                  {data.title}
-                </div>
-                <div className="text-base md:text-lg font-bold">{data.price}</div>
-              </div>
+              {data.imageFit !== "contain" && (
+                <>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
+                    <div className="text-xs md:text-sm font-semibold uppercase tracking-wider opacity-90">
+                      {data.title}
+                    </div>
+                    <div className="text-base md:text-lg font-bold">{data.price}</div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
           <div>

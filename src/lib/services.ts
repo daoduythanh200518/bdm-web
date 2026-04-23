@@ -5,6 +5,7 @@ export type ServiceDetail = {
   price: string;
   heroVariant: "orange" | "blue" | "purple" | "dark";
   image: string;
+  imageFit?: "cover" | "contain";
   intro: string;
   highlights: { title: string; text: string }[];
   benefits: string[];
@@ -73,6 +74,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     price: "Chỉ từ 50 triệu",
     heroVariant: "blue",
     image: "/images/services/tich-xanh-banner.png",
+    imageFit: "contain",
     intro:
       "Tích xanh là dấu xác thực quan trọng giúp nâng tầm thương hiệu, tăng uy tín và niềm tin với khách hàng. Biển Đông Media hỗ trợ xác minh tích xanh trên Facebook, TikTok, Instagram cho cả cá nhân và doanh nghiệp.",
     highlights: [
