@@ -56,7 +56,7 @@ export default function ContactBanner() {
           <div className="inline-block bg-[var(--primary)]/20 text-[var(--primary)] px-3.5 py-1 md:px-4 md:py-1.5 rounded-full text-[11px] md:text-[12px] font-semibold tracking-wider uppercase mb-3 md:mb-4">
             Tư vấn miễn phí
           </div>
-          <h2 className="text-[26px] md:text-3xl lg:text-4xl font-black mb-3 md:mb-4 text-white [text-shadow:0_0_12px_rgba(255,255,255,0.5),0_0_28px_rgba(255,255,255,0.35)]">
+          <h2 className="text-[26px] md:text-3xl lg:text-4xl font-black mb-3 md:mb-4 text-white">
             Bạn cần tư vấn dịch vụ?
           </h2>
           <p className="text-gray-100 text-[14px] md:text-[15px] mb-5 md:mb-6 leading-relaxed font-medium">
