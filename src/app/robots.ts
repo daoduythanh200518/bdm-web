@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/config/site";
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || SITE.url;
 

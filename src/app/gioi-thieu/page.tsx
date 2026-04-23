@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import PageHeader from "@/components/PageHeader";
-import StatsCounter from "@/components/StatsCounter";
+import PageHeader from "@/components/sections/PageHeader";
+import StatsCounter from "@/components/sections/StatsCounter";
+import SectionHeading from "@/components/ui/SectionHeading";
 import { CheckCircle2, Award, Users, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -61,12 +62,11 @@ export default function AboutPage() {
 
       <section className="section-y bg-[var(--soft-bg)]">
         <div className="container-x">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-[24px] md:text-3xl font-extrabold mb-3">Giá trị cốt lõi</h2>
-            <p className="text-[var(--muted)] text-[14px] md:text-[15px] max-w-2xl mx-auto">
-              Những nguyên tắc định hình cách chúng tôi phục vụ khách hàng mỗi ngày
-            </p>
-          </div>
+          <SectionHeading
+            title="Giá trị cốt lõi"
+            subtitle="Những nguyên tắc định hình cách chúng tôi phục vụ khách hàng mỗi ngày"
+            size="md"
+          />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {[
               { icon: Award, title: "Uy tín", text: "Đối tác cao cấp nhất của Facebook tại Việt Nam." },

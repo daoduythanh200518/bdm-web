@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ServiceDetailView from "@/components/ServiceDetail";
-import { SERVICE_DETAILS } from "@/lib/services";
+import ServiceDetailView from "@/components/sections/ServiceDetail";
+import { SERVICE_DETAILS } from "@/data/services";
 
 export function generateStaticParams() {
   return Object.keys(SERVICE_DETAILS).map((slug) => ({ slug }));

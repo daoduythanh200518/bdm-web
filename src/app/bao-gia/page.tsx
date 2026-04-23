@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Phone } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
-import { SITE } from "@/lib/site";
+import { Check } from "lucide-react";
+import PageHeader from "@/components/sections/PageHeader";
+import SectionHeading from "@/components/ui/SectionHeading";
+import CallToAction from "@/components/ui/CallToAction";
 
 export const metadata: Metadata = {
   title: "Báo giá",
@@ -77,14 +78,11 @@ export default function PricingPage() {
 
       <section className="section-y bg-white">
         <div className="container-x">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-[26px] md:text-3xl font-extrabold mb-3">
-              Gói thuê tài khoản quảng cáo
-            </h2>
-            <p className="text-[var(--muted)] text-[14px] md:text-[15px] max-w-2xl mx-auto">
-              Phí quản lý tính trên ngân sách quảng cáo hàng tháng
-            </p>
-          </div>
+          <SectionHeading
+            title="Gói thuê tài khoản quảng cáo"
+            subtitle="Phí quản lý tính trên ngân sách quảng cáo hàng tháng"
+            size="md"
+          />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:pt-4">
             {PACKAGES.map((p) => (
               <div
@@ -137,12 +135,11 @@ export default function PricingPage() {
 
       <section className="section-y bg-[var(--soft-bg)]">
         <div className="container-x">
-          <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-[26px] md:text-3xl font-extrabold mb-3">Giá các dịch vụ khác</h2>
-            <p className="text-[var(--muted)] text-[14px] md:text-[15px]">
-              Tham khảo mức giá khởi điểm — liên hệ để nhận báo giá chi tiết
-            </p>
-          </div>
+          <SectionHeading
+            title="Giá các dịch vụ khác"
+            subtitle="Tham khảo mức giá khởi điểm — liên hệ để nhận báo giá chi tiết"
+            size="md"
+          />
 
           {/* Mobile: card stack */}
           <div className="md:hidden space-y-3">
@@ -187,22 +184,11 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section-y bg-gradient-to-br from-[var(--primary)] to-[#c57100] text-white">
-        <div className="container-x text-center">
-          <h2 className="text-[26px] md:text-3xl font-extrabold mb-4">Cần báo giá chi tiết?</h2>
-          <p className="text-[14px] md:text-[15px] mb-6 md:mb-7 opacity-95 max-w-2xl mx-auto">
-            Mỗi doanh nghiệp có nhu cầu riêng. Liên hệ đội ngũ tư vấn để nhận báo giá tuỳ chỉnh và ưu đãi theo combo dịch vụ.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a href={`tel:${SITE.hotlineRaw}`} className="btn btn-white">
-              <Phone size={18} /> {SITE.hotline}
-            </a>
-            <Link href="/lien-he" className="btn btn-outline !border-white !text-white hover:!bg-white hover:!text-[var(--primary)]">
-              Gửi yêu cầu báo giá
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CallToAction
+        title="Cần báo giá chi tiết?"
+        description="Mỗi doanh nghiệp có nhu cầu riêng. Liên hệ đội ngũ tư vấn để nhận báo giá tuỳ chỉnh và ưu đãi theo combo dịch vụ."
+        secondaryLabel="Gửi yêu cầu báo giá"
+      />
     </>
   );
 }

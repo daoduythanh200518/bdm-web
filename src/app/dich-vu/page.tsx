@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
-import { SERVICES } from "@/lib/site";
+import PageHeader from "@/components/sections/PageHeader";
+import { SERVICES } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Dịch vụ",

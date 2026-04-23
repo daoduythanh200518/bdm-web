@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
-import { NEWS } from "@/lib/news";
+import PageHeader from "@/components/sections/PageHeader";
+import { NEWS } from "@/data/news";
 
 export const metadata: Metadata = {
   title: "Tin tức mới",

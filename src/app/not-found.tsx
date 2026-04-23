@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Home, Phone } from "lucide-react";
-import { SITE } from "@/lib/site";
+import { Home } from "lucide-react";
+import HotlineButton from "@/components/ui/HotlineButton";
 
 export default function NotFound() {
   return (
@@ -20,9 +20,7 @@ export default function NotFound() {
           <Link href="/" className="btn btn-primary">
             <Home size={18} /> Về trang chủ
           </Link>
-          <a href={`tel:${SITE.hotlineRaw}`} className="btn btn-outline">
-            <Phone size={18} /> {SITE.hotline}
-          </a>
+          <HotlineButton variant="outline" />
         </div>
       </div>
     </section>

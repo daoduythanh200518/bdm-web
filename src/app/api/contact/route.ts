@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
-import { SITE } from "@/lib/site";
+import { SITE } from "@/config/site";
 
 const schema = z.object({
   name: z.string().min(2, "Họ tên quá ngắn"),

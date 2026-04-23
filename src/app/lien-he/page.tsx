@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
-import ContactBanner from "@/components/ContactBanner";
-import { SITE } from "@/lib/site";
+import PageHeader from "@/components/sections/PageHeader";
+import ContactBanner from "@/components/sections/ContactBanner";
+import { SITE } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Liên hệ",

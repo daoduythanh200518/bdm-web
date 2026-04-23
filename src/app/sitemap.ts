@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { SERVICE_DETAILS } from "@/lib/services";
-import { NEWS } from "@/lib/news";
-import { SITE } from "@/lib/site";
+import { SERVICE_DETAILS } from "@/data/services";
+import { NEWS } from "@/data/news";
+import { SITE } from "@/config/site";
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || SITE.url;
 

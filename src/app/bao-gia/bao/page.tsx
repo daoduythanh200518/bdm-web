@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Phone } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
-import { SITE } from "@/lib/site";
+import PageHeader from "@/components/sections/PageHeader";
+import CallToAction from "@/components/ui/CallToAction";
 
 export const metadata: Metadata = {
   title: "Báo giá Báo chí",
@@ -92,24 +90,12 @@ export default function PressPricingPage() {
         </div>
       </section>
 
-      <section className="section-y bg-[var(--soft-bg)]">
-        <div className="container-x text-center">
-          <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
-            Muốn báo giá đầu báo chưa có trong danh sách?
-          </h2>
-          <p className="text-[var(--muted)] mb-7 max-w-2xl mx-auto">
-            Biển Đông Media có quan hệ với hơn 50 đầu báo lớn nhỏ. Liên hệ để nhận báo giá cho bất kỳ đầu báo nào bạn cần.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a href={`tel:${SITE.hotlineRaw}`} className="btn btn-primary">
-              <Phone size={18} /> {SITE.hotline}
-            </a>
-            <Link href="/lien-he" className="btn btn-outline">
-              Gửi yêu cầu
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CallToAction
+        variant="soft"
+        title="Muốn báo giá đầu báo chưa có trong danh sách?"
+        description="Biển Đông Media có quan hệ với hơn 50 đầu báo lớn nhỏ. Liên hệ để nhận báo giá cho bất kỳ đầu báo nào bạn cần."
+        secondaryLabel="Gửi yêu cầu"
+      />
     </>
   );
 }

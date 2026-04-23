@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
-import PageHeader from "@/components/PageHeader";
-import { NEWS } from "@/lib/news";
+import PageHeader from "@/components/sections/PageHeader";
+import { NEWS } from "@/data/news";
 
 export function generateStaticParams() {
   return NEWS.map((n) => ({ slug: n.slug }));

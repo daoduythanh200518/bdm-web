@@ -1,12 +1,12 @@
-import HeroSlider from "@/components/HeroSlider";
-import AboutSection from "@/components/AboutSection";
-import ServicesGrid from "@/components/ServicesGrid";
-import Testimonials from "@/components/Testimonials";
-import FAQ from "@/components/FAQ";
-import ProcessSteps from "@/components/ProcessSteps";
-import ContactBanner from "@/components/ContactBanner";
-import StatsCounter from "@/components/StatsCounter";
-import PartnersCarousel from "@/components/PartnersCarousel";
+import HeroSlider from "@/components/sections/HeroSlider";
+import AboutSection from "@/components/sections/AboutSection";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import ProcessSteps from "@/components/sections/ProcessSteps";
+import ContactBanner from "@/components/sections/ContactBanner";
+import StatsCounter from "@/components/sections/StatsCounter";
+import PartnersCarousel from "@/components/sections/PartnersCarousel";
 
 export default function HomePage() {
   return (
