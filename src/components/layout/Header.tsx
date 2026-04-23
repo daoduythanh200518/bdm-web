@@ -56,7 +56,7 @@ export default function Header() {
                 {item.children && <ChevronDown size={14} />}
               </Link>
               {item.children && (
-                <div className="absolute top-full left-0 min-w-[260px] bg-[var(--background)] shadow-xl rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-[var(--border)]">
+                <div className="dropdown-panel absolute top-full left-0 min-w-[260px] bg-[var(--background)] shadow-xl rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all border border-[var(--border)]">
                   {item.children.map((c) => (
                     <Link
                       key={c.href}
