@@ -1,12 +1,8 @@
 import HeroSlider from "@/components/sections/HeroSlider";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
-import Testimonials from "@/components/sections/Testimonials";
-import FAQ from "@/components/sections/FAQ";
 import ProcessSteps from "@/components/sections/ProcessSteps";
-import ContactBanner from "@/components/sections/ContactBanner";
-import StatsCounter from "@/components/sections/StatsCounter";
-import PartnersCarousel from "@/components/sections/PartnersCarousel";
+import LazyClientSections from "@/components/home/LazyClientSections";
 
 export default function HomePage() {
   return (
@@ -14,12 +10,8 @@ export default function HomePage() {
       <HeroSlider />
       <AboutSection />
       <ServicesGrid />
-      <Testimonials />
-      <FAQ />
       <ProcessSteps />
-      <ContactBanner />
-      <StatsCounter />
-      <PartnersCarousel />
+      <LazyClientSections />
     </>
   );
 }
