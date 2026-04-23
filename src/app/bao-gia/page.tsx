@@ -58,7 +58,7 @@ const PACKAGES = [
 ];
 
 const SERVICE_PRICES = [
-  { name: "Tích xanh Facebook", price: "Từ 60.000.000 đ", note: "Thời gian: 5-10 ngày làm việc" },
+  { name: "Tích xanh Facebook", price: "Từ 50.000.000 đ", note: "Thời gian: 5-10 ngày làm việc" },
   { name: "Tích xanh TikTok", price: "Từ 80.000.000 đ", note: "Thời gian: 7-14 ngày làm việc" },
   { name: "Tích xanh Instagram", price: "Từ 70.000.000 đ", note: "Thời gian: 7-14 ngày làm việc" },
   { name: "Booking báo PR", price: "Từ 2.000.000 đ / bài", note: "Tuỳ đầu báo & chuyên mục" },

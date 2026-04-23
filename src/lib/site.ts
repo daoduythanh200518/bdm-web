@@ -52,9 +52,9 @@ export const SERVICES = [
   {
     slug: "tich-xanh-thuong-hieu",
     title: "Tích Xanh thương hiệu",
-    short: "Mức giá: Chỉ từ 60tr. Tiktok, Instagram, Facebook. Đi kèm với dịch vụ này…",
-    price: "Chỉ từ 60tr",
-    image: "/images/services/banner-dv2.jpg",
+    short: "Mức giá: Chỉ từ 50tr. Tiktok, Instagram, Facebook. Đi kèm với dịch vụ này…",
+    price: "Chỉ từ 50tr",
+    image: "/images/services/tich-xanh-banner.png",
   },
   {
     slug: "booking-bao-pr",

@@ -70,15 +70,15 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     slug: "tich-xanh-thuong-hieu",
     title: "Tích Xanh thương hiệu",
     subtitle: "Xác minh tích xanh Facebook, TikTok, Instagram",
-    price: "Chỉ từ 60 triệu",
+    price: "Chỉ từ 50 triệu",
     heroVariant: "blue",
-    image: "/images/services/banner-dv2.jpg",
+    image: "/images/services/tich-xanh-banner.png",
     intro:
       "Tích xanh là dấu xác thực quan trọng giúp nâng tầm thương hiệu, tăng uy tín và niềm tin với khách hàng. Biển Đông Media hỗ trợ xác minh tích xanh trên Facebook, TikTok, Instagram cho cả cá nhân và doanh nghiệp.",
     highlights: [
       { title: "Tỷ lệ thành công cao", text: "Đội ngũ chuyên gia hỗ trợ hồ sơ từ A đến Z." },
       { title: "Đa nền tảng", text: "Facebook, TikTok, Instagram — tích xanh trọn gói." },
-      { title: "Mức giá cạnh tranh", text: "Chỉ từ 60 triệu, minh bạch, không phát sinh." },
+      { title: "Mức giá cạnh tranh", text: "Chỉ từ 50 triệu, minh bạch, không phát sinh." },
       { title: "Bảo hành dịch vụ", text: "Cam kết hoàn phí nếu không đạt kết quả." },
     ],
     benefits: [
