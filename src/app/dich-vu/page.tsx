@@ -19,14 +19,14 @@ export default function ServicesIndexPage() {
         subtitle="Giải pháp Digital Marketing toàn diện — từ tài khoản quảng cáo đến booking báo chí và KOLs"
         crumbs={[{ label: "Dịch vụ" }]}
       />
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
             {SERVICES.map((s) => (
               <Link
                 key={s.slug}
                 href={`/dich-vu/${s.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col sm:flex-row"
+                className="group bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col sm:flex-row"
               >
                 <div className="sm:w-2/5 shrink-0 relative aspect-[16/10] sm:aspect-auto">
                   <Image
@@ -45,7 +45,7 @@ export default function ServicesIndexPage() {
                     <h3 className="text-lg md:text-xl font-extrabold mb-2 md:mb-3 group-hover:text-[var(--primary)] transition-colors leading-snug">
                       {s.title}
                     </h3>
-                    <p className="text-[13.5px] md:text-[14px] text-gray-600 leading-relaxed mb-3 md:mb-4">
+                    <p className="text-[13.5px] md:text-[14px] text-[var(--muted)] leading-relaxed mb-3 md:mb-4">
                       {s.short}
                     </p>
                   </div>

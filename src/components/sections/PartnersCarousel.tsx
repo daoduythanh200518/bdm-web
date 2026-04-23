@@ -20,7 +20,7 @@ export default function PartnersCarousel() {
   );
 
   return (
-    <section className="py-10 md:py-14 bg-white border-y border-gray-100">
+    <section className="py-10 md:py-14 bg-[var(--background)] border-y border-[var(--border)]">
       <div className="container-x">
         <div className="text-center mb-6 md:mb-8">
           <div className="text-[var(--primary)] font-semibold text-[12px] md:text-[13px] tracking-wider uppercase mb-2">
@@ -37,7 +37,7 @@ export default function PartnersCarousel() {
                 className="embla__slide !flex-[0_0_50%] sm:!flex-[0_0_33.333%] md:!flex-[0_0_25%] lg:!flex-[0_0_16.666%] px-2 md:px-3"
                 key={i}
               >
-                <div className="h-20 md:h-24 rounded-xl border border-gray-200 bg-white flex items-center justify-center p-3 md:p-4 hover:shadow-md hover:border-[var(--primary)]/30 transition-all">
+                <div className="h-20 md:h-24 rounded-xl border border-[var(--border)] bg-[var(--card)] flex items-center justify-center p-3 md:p-4 hover:shadow-md hover:border-[var(--primary)]/30 transition-all">
                   <Image
                     src={p.src}
                     alt={p.alt}

@@ -67,9 +67,9 @@ export default function Testimonials() {
                 className="embla__slide sm:!flex-[0_0_50%] lg:!flex-[0_0_33.333%] px-2 md:px-3"
                 key={i}
               >
-                <div className="bg-white rounded-2xl p-5 md:p-7 shadow-sm border border-gray-100 h-full">
+                <div className="bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl p-5 md:p-7 shadow-sm border border-[var(--border)] h-full">
                   <Quote size={36} className="text-[var(--primary)] mb-4" />
-                  <p className="text-[15px] text-gray-700 italic leading-relaxed mb-6">
+                  <p className="text-[15px] text-[var(--foreground)]/80 italic leading-relaxed mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="flex items-center gap-3">
@@ -101,7 +101,7 @@ export default function Testimonials() {
               className={`h-2.5 rounded-full transition-all ${
                 i === selected
                   ? "bg-[var(--primary)] w-8"
-                  : "bg-gray-300 w-2.5"
+                  : "bg-[var(--border)] w-2.5"
               }`}
               aria-label={`Đến testimonial ${i + 1}`}
             />

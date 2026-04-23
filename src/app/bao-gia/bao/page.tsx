@@ -33,9 +33,9 @@ export default function PressPricingPage() {
         ]}
       />
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x">
-          <div className="bg-[var(--muted-bg)] rounded-2xl p-4 md:p-5 mb-6 md:mb-8 text-[13px] md:text-[13.5px] text-gray-700 border-l-4 border-[var(--primary)] leading-relaxed">
+          <div className="bg-[var(--muted-bg)] rounded-2xl p-4 md:p-5 mb-6 md:mb-8 text-[13px] md:text-[13.5px] text-[var(--foreground)]/80 border-l-4 border-[var(--primary)] leading-relaxed">
             <strong>Lưu ý:</strong> Giá trên là giá list công khai, chưa bao gồm chiết khấu. Đặt combo 3+ bài sẽ được ưu đãi từ 10-25%. Bài dài hơn 1500 từ, bài có ảnh/video phụ sẽ tính phụ thu. Liên hệ hotline để được báo giá chi tiết và ưu đãi tốt nhất.
           </div>
 
@@ -44,7 +44,7 @@ export default function PressPricingPage() {
             {PRESS_PRICES.map((p, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl border border-gray-100 shadow-sm p-4"
+                className="bg-[var(--card)] text-[var(--card-foreground)] rounded-xl border border-[var(--border)] shadow-sm p-4"
               >
                 <div className="flex items-start justify-between gap-3 mb-1">
                   <div className="font-bold text-[15px] min-w-0 flex-1">{p.outlet}</div>
@@ -52,7 +52,7 @@ export default function PressPricingPage() {
                     {p.price}
                   </div>
                 </div>
-                <div className="text-[13px] text-gray-600 mb-1.5">{p.category}</div>
+                <div className="text-[13px] text-[var(--muted)] mb-1.5">{p.category}</div>
                 <div className="text-[12px] text-[var(--muted)] flex items-center gap-1">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-[var(--primary)]" />
                   Thời gian: {p.turn}
@@ -62,7 +62,7 @@ export default function PressPricingPage() {
           </div>
 
           {/* Desktop / tablet: table */}
-          <div className="hidden md:block table-scroll bg-white rounded-2xl shadow-sm border border-gray-100">
+          <div className="hidden md:block table-scroll bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl shadow-sm border border-[var(--border)]">
             <table className="w-full text-[14px]">
               <thead className="bg-[var(--primary)] text-white">
                 <tr>
@@ -76,10 +76,10 @@ export default function PressPricingPage() {
                 {PRESS_PRICES.map((p, i) => (
                   <tr
                     key={i}
-                    className={`border-t border-gray-100 ${i % 2 ? "bg-[var(--soft-bg)]" : ""}`}
+                    className={`border-t border-[var(--border)] ${i % 2 ? "bg-[var(--soft-bg)]" : ""}`}
                   >
                     <td className="p-4 font-bold whitespace-nowrap">{p.outlet}</td>
-                    <td className="p-4 text-gray-700">{p.category}</td>
+                    <td className="p-4 text-[var(--foreground)]/80">{p.category}</td>
                     <td className="p-4 text-right font-bold text-[var(--primary)] whitespace-nowrap">{p.price}</td>
                     <td className="p-4 text-center text-[var(--muted)] whitespace-nowrap">{p.turn}</td>
                   </tr>

@@ -11,14 +11,14 @@ const STEPS = [
 
 export default function ProcessSteps() {
   return (
-    <section className="section-y bg-white">
+    <section className="section-y bg-[var(--background)]">
       <div className="container-x">
         <SectionHeading title="Quy trình thuê tài khoản quảng cáo" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {STEPS.map((s) => (
             <div
               key={s.n}
-              className="relative bg-[var(--soft-bg)] rounded-2xl p-5 md:p-7 hover:shadow-xl transition-all hover:bg-white border border-gray-100"
+              className="relative bg-[var(--soft-bg)] rounded-2xl p-5 md:p-7 hover:shadow-xl transition-all hover:bg-[var(--card)] border border-[var(--border)]"
             >
               <div className="text-5xl md:text-6xl font-extrabold text-[var(--primary)]/20 absolute top-2 right-4 select-none">
                 {s.n}
@@ -27,7 +27,7 @@ export default function ProcessSteps() {
                 <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-bold text-base md:text-lg mb-3 md:mb-4">
                   {s.n}
                 </div>
-                <p className="text-[14px] md:text-[14.5px] text-gray-700 leading-relaxed">
+                <p className="text-[14px] md:text-[14.5px] text-[var(--foreground)]/80 leading-relaxed">
                   {s.text}
                 </p>
               </div>

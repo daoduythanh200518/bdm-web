@@ -54,7 +54,7 @@ export default function FAQ() {
           {FAQS.map((f, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl border border-gray-100 overflow-hidden"
+              className="bg-[var(--card)] text-[var(--card-foreground)] rounded-xl border border-[var(--border)] overflow-hidden"
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
@@ -69,7 +69,7 @@ export default function FAQ() {
                 />
               </button>
               {open === i && (
-                <div className="px-4 md:px-5 pb-4 md:pb-5 text-[13.5px] md:text-[14.5px] text-gray-700 leading-relaxed border-t border-gray-100 pt-3 md:pt-4">
+                <div className="px-4 md:px-5 pb-4 md:pb-5 text-[13.5px] md:text-[14.5px] text-[var(--foreground)]/80 leading-relaxed border-t border-[var(--border)] pt-3 md:pt-4">
                   {f.a}
                 </div>
               )}

@@ -19,7 +19,7 @@ export default function ContactPage() {
         crumbs={[{ label: "Liên hệ" }]}
       />
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {[
             {
@@ -53,7 +53,7 @@ export default function ContactPage() {
                   <c.icon size={22} />
                 </div>
                 <div className="font-bold text-[14.5px] md:text-[15px] mb-2">{c.title}</div>
-                <div className="text-[13px] md:text-[13.5px] text-gray-600 leading-relaxed break-words">
+                <div className="text-[13px] md:text-[13.5px] text-[var(--muted)] leading-relaxed break-words">
                   {c.content}
                 </div>
               </>
@@ -62,14 +62,14 @@ export default function ContactPage() {
               <a
                 key={i}
                 href={c.href}
-                className="block text-center bg-[var(--soft-bg)] rounded-2xl p-5 md:p-6 border border-gray-100 hover:shadow-xl hover:border-[var(--primary)] transition-all"
+                className="block text-center bg-[var(--soft-bg)] rounded-2xl p-5 md:p-6 border border-[var(--border)] hover:shadow-xl hover:border-[var(--primary)] transition-all"
               >
                 {Body}
               </a>
             ) : (
               <div
                 key={i}
-                className="text-center bg-[var(--soft-bg)] rounded-2xl p-5 md:p-6 border border-gray-100"
+                className="text-center bg-[var(--soft-bg)] rounded-2xl p-5 md:p-6 border border-[var(--border)]"
               >
                 {Body}
               </div>
@@ -82,13 +82,13 @@ export default function ContactPage() {
 
       <section className="py-10 md:py-12 bg-[var(--soft-bg)]">
         <div className="container-x">
-          <div className="bg-white rounded-2xl p-5 sm:p-7 md:p-10 border border-gray-100 grid grid-cols-[auto_1fr] gap-4 md:gap-6 items-start md:items-center">
+          <div className="bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl p-5 sm:p-7 md:p-10 border border-[var(--border)] grid grid-cols-[auto_1fr] gap-4 md:gap-6 items-start md:items-center">
             <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center shrink-0">
               <Clock size={24} />
             </div>
             <div>
               <h3 className="text-lg md:text-xl font-bold mb-1.5 md:mb-2">Giờ làm việc</h3>
-              <div className="text-[13.5px] md:text-[14.5px] text-gray-700 space-y-1">
+              <div className="text-[13.5px] md:text-[14.5px] text-[var(--foreground)]/80 space-y-1">
                 <p>Thứ Hai - Thứ Bảy: 08:00 - 18:00</p>
                 <p>Chủ nhật: Nghỉ (hỗ trợ khẩn cấp qua hotline)</p>
                 <p className="text-[var(--primary)] font-semibold mt-2">

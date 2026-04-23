@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { NAV, SITE } from "@/config/site";
 import HotlineButton from "@/components/ui/HotlineButton";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -28,8 +29,8 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 transition-all ${
         scrolled
-          ? "bg-white shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
-          : "bg-white/95 backdrop-blur"
+          ? "bg-[var(--background)] shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
+          : "bg-[var(--background)]/95 backdrop-blur"
       }`}
     >
       <div className="container-x flex items-center justify-between h-[60px] md:h-[68px] gap-3">
@@ -55,12 +56,12 @@ export default function Header() {
                 {item.children && <ChevronDown size={14} />}
               </Link>
               {item.children && (
-                <div className="absolute top-full left-0 min-w-[260px] bg-white shadow-xl rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100">
+                <div className="absolute top-full left-0 min-w-[260px] bg-[var(--background)] shadow-xl rounded-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-[var(--border)]">
                   {item.children.map((c) => (
                     <Link
                       key={c.href}
                       href={c.href}
-                      className="block px-4 py-3 text-[14px] hover:bg-[var(--muted-bg)] hover:text-[var(--primary)] transition-colors"
+                      className="block px-4 py-3 text-[14px] text-[var(--foreground)] hover:bg-[var(--muted-bg)] hover:text-[var(--primary)] transition-colors"
                     >
                       {c.label}
                     </Link>
@@ -71,8 +72,9 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Hotline + mobile toggle */}
+        {/* Theme toggle + Hotline + mobile toggle */}
         <div className="flex items-center gap-2 shrink-0">
+          <ThemeToggle />
           <a
             href={`tel:${SITE.hotlineRaw}`}
             className="hidden md:inline-flex items-center gap-2 btn btn-primary !pt-[7px] !pb-[9px] !px-3.5 !min-h-0 !text-[13px] lg:!text-[13.5px] !leading-none"
@@ -105,13 +107,13 @@ export default function Header() {
             className="absolute inset-0 bg-black/50"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute top-0 right-0 h-full w-[85%] max-w-[320px] bg-white shadow-2xl flex flex-col">
-            <div className="flex items-center justify-between p-4 border-b">
-              <span className="font-bold">Menu</span>
+          <div className="absolute top-0 right-0 h-full w-[85%] max-w-[320px] bg-[var(--background)] shadow-2xl flex flex-col">
+            <div className="flex items-center justify-between p-4 border-b border-[var(--border)]">
+              <span className="font-bold text-[var(--foreground)]">Menu</span>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Đóng"
-                className="p-1.5 -mr-1.5"
+                className="p-1.5 -mr-1.5 text-[var(--foreground)]"
               >
                 <X size={24} />
               </button>
@@ -122,7 +124,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 font-medium border-b border-gray-100"
+                    className="block px-4 py-3 font-medium border-b border-[var(--border)] text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -133,7 +135,7 @@ export default function Header() {
                           key={c.href}
                           href={c.href}
                           onClick={() => setOpen(false)}
-                          className="block px-8 py-2.5 text-[13px] text-[var(--muted)]"
+                          className="block px-8 py-2.5 text-[13px] text-[var(--muted)] hover:text-[var(--primary)] transition-colors"
                         >
                           → {c.label}
                         </Link>
@@ -143,7 +145,7 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-            <div className="p-4 border-t">
+            <div className="p-4 border-t border-[var(--border)]">
               <HotlineButton className="w-full" iconSize={16} />
             </div>
           </div>

@@ -39,7 +39,7 @@ export default async function NewsDetailPage(
         ]}
       />
 
-      <article className="section-y bg-white">
+      <article className="section-y bg-[var(--background)]">
         <div className="container-x max-w-4xl">
           <div className="flex items-center flex-wrap gap-2 md:gap-4 text-[12px] md:text-[13px] text-[var(--muted)] mb-5 md:mb-6">
             <span className="bg-[var(--primary)]/10 text-[var(--primary)] px-3 py-1 rounded-full font-semibold uppercase tracking-wider text-[10.5px] md:text-[11px]">
@@ -65,17 +65,17 @@ export default async function NewsDetailPage(
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <p className="text-base md:text-xl text-gray-700 font-medium leading-relaxed mb-6 md:mb-8 border-l-4 border-[var(--primary)] pl-4 md:pl-5 italic">
+            <p className="text-base md:text-xl text-[var(--foreground)]/80 font-medium leading-relaxed mb-6 md:mb-8 border-l-4 border-[var(--primary)] pl-4 md:pl-5 italic">
               {item.excerpt}
             </p>
-            <div className="space-y-4 md:space-y-5 text-[14.5px] md:text-[16px] text-gray-800 leading-relaxed">
+            <div className="space-y-4 md:space-y-5 text-[14.5px] md:text-[16px] text-[var(--foreground)] leading-relaxed">
               {item.content.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
           </div>
 
-          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-100 flex flex-col sm:flex-row gap-3 sm:justify-between">
+          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row gap-3 sm:justify-between">
             <Link href="/tin-tuc" className="btn btn-outline">
               <ArrowLeft size={16} /> Tất cả bài viết
             </Link>
@@ -96,7 +96,7 @@ export default async function NewsDetailPage(
               <Link
                 key={r.slug}
                 href={`/tin-tuc/${r.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="group bg-[var(--card)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image

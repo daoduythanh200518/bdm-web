@@ -19,7 +19,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
         ]}
       />
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="max-w-[520px] mx-auto lg:max-w-none w-full">
             <div
@@ -54,7 +54,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
             <h2 className="text-2xl md:text-3xl font-extrabold mb-3 md:mb-4">
               {data.title}
             </h2>
-            <p className="text-[14.5px] md:text-[15px] text-gray-700 leading-relaxed mb-5 md:mb-6">
+            <p className="text-[14.5px] md:text-[15px] text-[var(--foreground)]/80 leading-relaxed mb-5 md:mb-6">
               {data.intro}
             </p>
             <div className="flex flex-wrap gap-2.5 md:gap-3">
@@ -78,13 +78,13 @@ export default function ServiceDetailView({ data }: { data: SD }) {
             {data.highlights.map((h, i) => (
               <div
                 key={i}
-                className="bg-white p-5 md:p-6 rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="bg-[var(--card)] text-[var(--card-foreground)] p-5 md:p-6 rounded-2xl border border-[var(--border)] hover:shadow-xl hover:-translate-y-1 transition-all"
               >
                 <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">
                   0{i + 1}
                 </div>
                 <h3 className="font-bold text-[15px] md:text-[16px] mb-2">{h.title}</h3>
-                <p className="text-[13px] md:text-[13.5px] text-gray-600 leading-relaxed">
+                <p className="text-[13px] md:text-[13.5px] text-[var(--muted)] leading-relaxed">
                   {h.text}
                 </p>
               </div>
@@ -93,7 +93,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
         </div>
       </section>
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x grid lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
             <h2 className="text-[24px] md:text-3xl font-extrabold mb-4 md:mb-5">Quyền lợi khách hàng</h2>
@@ -104,7 +104,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
                     size={22}
                     className="shrink-0 text-[var(--primary)] mt-0.5"
                   />
-                  <span className="text-[15px] text-gray-700">{b}</span>
+                  <span className="text-[15px] text-[var(--foreground)]/85">{b}</span>
                 </li>
               ))}
             </ul>
@@ -115,12 +115,12 @@ export default function ServiceDetailView({ data }: { data: SD }) {
               {data.details.map((d, i) => (
                 <div
                   key={i}
-                  className="bg-[var(--muted-bg)] rounded-2xl p-6 border border-gray-100"
+                  className="bg-[var(--muted-bg)] rounded-2xl p-6 border border-[var(--border)]"
                 >
                   <h3 className="font-bold text-[17px] mb-3 text-[var(--primary)]">
                     {d.heading}
                   </h3>
-                  <div className="space-y-2 text-[14.5px] text-gray-700 leading-relaxed">
+                  <div className="space-y-2 text-[14.5px] text-[var(--foreground)]/80 leading-relaxed">
                     {d.paragraphs.map((p, j) => (
                       <p key={j}>{p}</p>
                     ))}

@@ -80,7 +80,7 @@ export default function ContactBanner() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-white text-[var(--foreground)] rounded-2xl p-5 sm:p-6 md:p-8 shadow-2xl"
+          className="bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl p-5 sm:p-6 md:p-8 shadow-2xl"
         >
           <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-5">Tư vấn trực tuyến</h3>
           <div className="space-y-4">
@@ -91,7 +91,7 @@ export default function ContactBanner() {
               <input
                 {...register("name")}
                 placeholder="Nguyễn Văn A"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-[14px]"
+                className="w-full px-4 py-3 bg-[var(--background)] border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-[14px] text-[var(--foreground)] placeholder:text-[var(--muted)]"
               />
               {errors.name && (
                 <p className="text-red-500 text-[12px] mt-1">
@@ -106,7 +106,7 @@ export default function ContactBanner() {
               <input
                 {...register("phone")}
                 placeholder="0327 345 555"
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-[14px]"
+                className="w-full px-4 py-3 bg-[var(--background)] border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-[14px] text-[var(--foreground)] placeholder:text-[var(--muted)]"
               />
               {errors.phone && (
                 <p className="text-red-500 text-[12px] mt-1">

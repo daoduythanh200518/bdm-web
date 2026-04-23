@@ -22,7 +22,7 @@ export default function NewsIndexPage() {
         crumbs={[{ label: "Tin tức" }]}
       />
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x">
           {/* Featured article */}
           <Link
@@ -50,7 +50,7 @@ export default function NewsIndexPage() {
               <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 md:mb-4 group-hover:text-[var(--primary)] transition-colors leading-tight">
                 {featured.title}
               </h2>
-              <p className="text-[14px] md:text-[15px] text-gray-600 leading-relaxed mb-4 md:mb-6">
+              <p className="text-[14px] md:text-[15px] text-[var(--muted)] leading-relaxed mb-4 md:mb-6">
                 {featured.excerpt}
               </p>
               <span className="inline-flex items-center gap-2 font-semibold text-[var(--primary)] text-[14px]">
@@ -65,7 +65,7 @@ export default function NewsIndexPage() {
               <Link
                 key={n.slug}
                 href={`/tin-tuc/${n.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col"
+                className="group bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all flex flex-col"
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
@@ -88,7 +88,7 @@ export default function NewsIndexPage() {
                   <h3 className="font-bold text-[16.5px] mb-2 group-hover:text-[var(--primary)] transition-colors leading-snug">
                     {n.title}
                   </h3>
-                  <p className="text-[13.5px] text-gray-600 line-clamp-3 mb-4 flex-1">
+                  <p className="text-[13.5px] text-[var(--muted)] line-clamp-3 mb-4 flex-1">
                     {n.excerpt}
                   </p>
                   <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--primary)]">

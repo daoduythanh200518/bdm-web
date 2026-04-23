@@ -6,7 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function ServicesGrid() {
   return (
-    <section className="section-y bg-white">
+    <section className="section-y bg-[var(--background)]">
       <div className="container-x">
         <SectionHeading
           eyebrow="Đa dạng dịch vụ"
@@ -19,7 +19,7 @@ export default function ServicesGrid() {
             <Link
               key={s.slug}
               href={`/dich-vu/${s.slug}`}
-              className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all"
+              className="group bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image

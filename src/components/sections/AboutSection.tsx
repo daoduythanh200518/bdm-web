@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="section-y bg-white">
+    <section className="section-y bg-[var(--background)]">
       <div className="container-x grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="max-w-[520px] mx-auto lg:max-w-none w-full">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
@@ -28,7 +28,7 @@ export default function AboutSection() {
           <p className="text-[var(--muted)] text-lg mb-5 font-medium">
             Đối tác cao cấp nhất của Facebook tại Việt Nam
           </p>
-          <div className="space-y-4 text-[15px] leading-relaxed text-gray-700">
+          <div className="space-y-4 text-[15px] leading-relaxed text-[var(--foreground)]/80">
             <p>
               <strong className="text-[var(--foreground)]">Biển Đông Media</strong> là công ty có vị thế vô cùng vững chắc trong lĩnh vực truyền thông, quảng cáo. Chúng tôi cung cấp toàn bộ các dịch vụ liên quan đến Facebook, Facebook Ads, Google Ads, Tiktok Ads,…
             </p>

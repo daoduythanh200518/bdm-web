@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SITE } from "@/config/site";
 
 const beVietnam = Be_Vietnam_Pro({
@@ -40,12 +41,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="vi" className={`${beVietnam.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-[var(--foreground)]">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <FloatingCTA />
+    <html lang="vi" className={`${beVietnam.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
+        <ThemeProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <FloatingCTA />
+        </ThemeProvider>
       </body>
     </html>
   );

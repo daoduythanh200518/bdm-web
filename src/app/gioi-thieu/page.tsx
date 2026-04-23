@@ -20,7 +20,7 @@ export default function AboutPage() {
         crumbs={[{ label: "Giới thiệu" }]}
       />
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="max-w-[520px] mx-auto lg:max-w-none w-full">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <h2 className="text-[24px] md:text-3xl lg:text-4xl font-extrabold mb-4 md:mb-5">
               Hành trình của Biển Đông Media
             </h2>
-            <div className="space-y-3 md:space-y-4 text-[14.5px] md:text-[15px] text-gray-700 leading-relaxed">
+            <div className="space-y-3 md:space-y-4 text-[14.5px] md:text-[15px] text-[var(--foreground)]/80 leading-relaxed">
               <p>
                 <strong>Biển Đông Media</strong> là công ty có vị thế vô cùng vững chắc trong lĩnh vực truyền thông, quảng cáo. Chúng tôi cung cấp toàn bộ các dịch vụ liên quan đến Facebook, Facebook Ads, Google Ads, Tiktok Ads.
               </p>
@@ -76,13 +76,13 @@ export default function AboutPage() {
             ].map((v, i) => (
               <div
                 key={i}
-                className="bg-white p-4 md:p-6 rounded-2xl border border-gray-100 text-center hover:shadow-xl transition-all"
+                className="bg-[var(--card)] p-4 md:p-6 rounded-2xl border border-[var(--border)] text-center hover:shadow-xl transition-all"
               >
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <v.icon size={22} />
                 </div>
                 <h3 className="font-bold text-[15px] md:text-[17px] mb-1.5 md:mb-2">{v.title}</h3>
-                <p className="text-[12.5px] md:text-[13.5px] text-gray-600 leading-relaxed">
+                <p className="text-[12.5px] md:text-[13.5px] text-[var(--muted)] leading-relaxed">
                   {v.text}
                 </p>
               </div>
@@ -93,31 +93,31 @@ export default function AboutPage() {
 
       <StatsCounter />
 
-      <section className="section-y bg-white">
+      <section className="section-y bg-[var(--background)]">
         <div className="container-x max-w-4xl">
           <h2 className="text-[24px] md:text-3xl font-extrabold mb-5 md:mb-6 text-center">
             Tầm nhìn & Sứ mệnh
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-            <div className="bg-[var(--muted-bg)] rounded-2xl p-5 md:p-7 border border-gray-100">
+            <div className="bg-[var(--muted-bg)] rounded-2xl p-5 md:p-7 border border-[var(--border)]">
               <div className="text-[var(--primary)] font-bold mb-2 text-[12px] md:text-[13px] tracking-wider uppercase">
                 Tầm nhìn
               </div>
               <h3 className="font-bold text-lg md:text-xl mb-2 md:mb-3">
                 Công ty truyền thông #1 Đông Nam Á
               </h3>
-              <p className="text-[14px] md:text-[14.5px] text-gray-700 leading-relaxed">
+              <p className="text-[14px] md:text-[14.5px] text-[var(--foreground)]/80 leading-relaxed">
                 Trở thành công ty truyền thông mạng xã hội hàng đầu khu vực Đông Nam Á, mang giải pháp Digital Marketing tối ưu đến mọi doanh nghiệp Việt.
               </p>
             </div>
-            <div className="bg-[var(--muted-bg)] rounded-2xl p-5 md:p-7 border border-gray-100">
+            <div className="bg-[var(--muted-bg)] rounded-2xl p-5 md:p-7 border border-[var(--border)]">
               <div className="text-[var(--primary)] font-bold mb-2 text-[12px] md:text-[13px] tracking-wider uppercase">
                 Sứ mệnh
               </div>
               <h3 className="font-bold text-lg md:text-xl mb-2 md:mb-3">
                 Nâng tầm thương hiệu Việt
               </h3>
-              <p className="text-[14px] md:text-[14.5px] text-gray-700 leading-relaxed">
+              <p className="text-[14px] md:text-[14.5px] text-[var(--foreground)]/80 leading-relaxed">
                 Đồng hành cùng doanh nghiệp Việt Nam trên hành trình số hoá, cung cấp công cụ quảng cáo bền bỉ, uy tín với mức phí tối ưu nhất thị trường.
               </p>
             </div>
