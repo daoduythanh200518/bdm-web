@@ -74,7 +74,7 @@ export default function Header() {
         <div className="flex items-center gap-2 shrink-0">
           <a
             href={`tel:${SITE.hotlineRaw}`}
-            className="hidden md:inline-flex items-center gap-2 btn btn-primary !py-2 !px-3.5 !min-h-0 !text-[13px] lg:!text-[13.5px]"
+            className="hidden md:inline-flex items-center gap-2 btn btn-primary !pt-[7px] !pb-[9px] !px-3.5 !min-h-0 !text-[13px] lg:!text-[13.5px] !leading-none"
           >
             <Phone size={15} />
             <span className="hidden lg:inline">{SITE.hotline}</span>
