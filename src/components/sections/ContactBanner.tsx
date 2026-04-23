@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Phone } from "lucide-react";
+import { Phone, Loader2 } from "lucide-react";
+import { toast } from "sonner";
 import { SITE } from "@/config/site";
 
 const schema = z.object({
@@ -19,7 +20,6 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function ContactBanner() {
-  const [submitted, setSubmitted] = useState<null | "ok" | "err">(null);
   const [submitting, setSubmitting] = useState(false);
   const {
     register,
@@ -30,6 +30,7 @@ export default function ContactBanner() {
 
   const onSubmit = async (data: FormData) => {
     setSubmitting(true);
+    const t = toast.loading("Đang gửi yêu cầu tư vấn...");
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -37,10 +38,16 @@ export default function ContactBanner() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Gửi thất bại");
-      setSubmitted("ok");
+      toast.success("Đã gửi yêu cầu!", {
+        id: t,
+        description: "Chúng tôi sẽ liên hệ trong vòng 15 phút.",
+      });
       reset();
     } catch {
-      setSubmitted("err");
+      toast.error("Gửi thất bại", {
+        id: t,
+        description: "Vui lòng thử lại hoặc gọi hotline.",
+      });
     } finally {
       setSubmitting(false);
     }
@@ -122,26 +129,23 @@ export default function ContactBanner() {
                 {...register("message")}
                 rows={3}
                 placeholder="Mô tả ngắn gọn nhu cầu..."
-                className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-[14px] resize-none"
+                className="w-full px-4 py-3 bg-[var(--background)] border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-[14px] text-[var(--foreground)] placeholder:text-[var(--muted)] resize-none"
               />
             </div>
             <button
               type="submit"
               disabled={submitting}
-              className="btn btn-primary w-full disabled:opacity-60"
+              className="btn btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {submitting ? "Đang gửi..." : "Gửi yêu cầu tư vấn"}
+              {submitting ? (
+                <>
+                  <Loader2 size={16} className="animate-spin" />
+                  Đang gửi...
+                </>
+              ) : (
+                "Gửi yêu cầu tư vấn"
+              )}
             </button>
-            {submitted === "ok" && (
-              <p className="text-green-600 text-[13px] text-center">
-                ✓ Cảm ơn bạn! Chúng tôi sẽ liên hệ trong vòng 15 phút.
-              </p>
-            )}
-            {submitted === "err" && (
-              <p className="text-red-500 text-[13px] text-center">
-                Gửi thất bại. Vui lòng gọi hotline {SITE.hotline}.
-              </p>
-            )}
           </div>
         </form>
       </div>
