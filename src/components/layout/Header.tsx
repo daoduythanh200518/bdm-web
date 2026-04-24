@@ -102,13 +102,13 @@ export default function Header() {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="fixed inset-0 z-[100] lg:hidden">
+        <div className="fixed inset-0 z-[100] lg:hidden h-[100dvh] w-screen">
           <div
             className="absolute inset-0 bg-black/50"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute top-0 right-0 h-full w-[85%] max-w-[320px] bg-[var(--background)] shadow-2xl flex flex-col">
-            <div className="flex items-center justify-between p-4 border-b border-[var(--border)]">
+          <div className="absolute inset-y-0 right-0 w-[85%] max-w-[320px] bg-[var(--background)] shadow-2xl flex flex-col">
+            <div className="flex items-center justify-between p-4 border-b border-[var(--border)] shrink-0">
               <span className="font-bold text-[var(--foreground)]">Menu</span>
               <button
                 onClick={() => setOpen(false)}
@@ -118,7 +118,7 @@ export default function Header() {
                 <X size={24} />
               </button>
             </div>
-            <nav className="flex-1 overflow-y-auto py-2">
+            <nav className="flex-1 min-h-0 overflow-y-auto py-2">
               {NAV.map((item) => (
                 <div key={item.href}>
                   <Link
@@ -145,7 +145,7 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-            <div className="p-4 border-t border-[var(--border)]">
+            <div className="p-4 border-t border-[var(--border)] shrink-0">
               <HotlineButton className="w-full" iconSize={16} />
             </div>
           </div>

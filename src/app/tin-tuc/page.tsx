@@ -27,9 +27,9 @@ export default function NewsIndexPage() {
           {/* Featured article */}
           <Link
             href={`/tin-tuc/${featured.slug}`}
-            className="group grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-stretch lg:items-center mb-10 md:mb-14 bg-[var(--muted-bg)] rounded-2xl overflow-hidden hover:shadow-xl transition-all"
+            className="group grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 items-center mb-10 md:mb-14 bg-[var(--muted-bg)] rounded-2xl overflow-hidden hover:shadow-xl transition-all"
           >
-            <div className="relative aspect-[16/9] lg:aspect-auto lg:h-full min-h-[220px] overflow-hidden">
+            <div className="relative aspect-[16/9] overflow-hidden">
               <Image
                 src={featured.image}
                 alt={featured.title}
@@ -59,8 +59,12 @@ export default function NewsIndexPage() {
             </div>
           </Link>
 
-          {/* Grid articles */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+          {/* Grid articles – cols thay đổi theo số bài để tránh ô trống */}
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7 ${
+              rest.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"
+            }`}
+          >
             {rest.map((n) => (
               <Link
                 key={n.slug}

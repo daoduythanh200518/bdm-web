@@ -14,7 +14,7 @@ export const SITE = {
   email: "info@biendongmedia.vn",
   supportEmail: "hotro@biendongmedia.vn",
   address: "Số 121 Đê La Thành, phường Văn Miếu - Quốc Tử Giám, thành phố Hà Nội",
-  messenger: "https://www.messenger.com/t/Biendongmedia.net",
+  messenger: "https://www.facebook.com/Biendongmediaa",
   zaloLink: "https://zalo.me/0327345555",
 };
 
