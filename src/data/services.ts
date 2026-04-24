@@ -22,14 +22,16 @@ export const SERVICES: ServiceSummary[] = [
     title: "Booking báo / Viết bài PR",
     short: "Là đối tác cao cấp của các đầu báo lớn như: VNExpress, Vtv, Zing, Thanh Niên…",
     price: "Liên hệ báo giá",
-    image: "/images/services/banner-dv3.jpg",
+    image: "/images/services/booking-bao.png",
+    imageFit: "contain",
   },
   {
     slug: "dich-vu-bo-sung",
     title: "Dịch vụ bổ sung",
     short: "Liên hệ với chúng tôi để được tư vấn và gửi báo giá cụ thể.",
     price: "Liên hệ báo giá",
-    image: "/images/services/truyenthong.jpg",
+    image: "/images/services/dich-vu-bo-sung.png",
+    imageFit: "contain",
   },
 ];
 
@@ -119,7 +121,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     subtitle: "Đối tác cao cấp của VNExpress, VTV, Zing, Thanh Niên",
     price: "Liên hệ báo giá",
     heroVariant: "purple",
-    image: "/images/services/banner-dv3.jpg",
+    image: "/images/services/booking-bao.png",
+    imageFit: "contain",
     intro:
       "Biển Đông Media là đối tác cao cấp của các đầu báo lớn hàng đầu Việt Nam. Chúng tôi nhận booking đăng bài PR, viết bài chuyên sâu, quảng cáo thương hiệu trên các tờ báo uy tín với mức giá ưu đãi nhất.",
     highlights: [
@@ -142,7 +145,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     subtitle: "KOLs, truyền thông tổng hợp, giải pháp chuyên biệt",
     price: "Liên hệ báo giá",
     heroVariant: "dark",
-    image: "/images/services/truyenthong.jpg",
+    image: "/images/services/dich-vu-bo-sung.png",
+    imageFit: "contain",
     intro:
       "Bên cạnh các dịch vụ chính, Biển Đông Media còn cung cấp nhiều giải pháp truyền thông bổ sung theo yêu cầu: Booking KOLs/KOCs, quản lý fanpage, sáng tạo nội dung, livestream. Hãy liên hệ để chúng tôi tư vấn gói dịch vụ phù hợp.",
     highlights: [

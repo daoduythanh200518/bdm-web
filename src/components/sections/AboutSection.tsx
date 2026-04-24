@@ -6,19 +6,14 @@ export default function AboutSection() {
     <section className="section-y bg-[var(--background)]">
       <div className="container-x grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <div className="max-w-[520px] mx-auto lg:max-w-none w-full">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] bg-[#0a1930]">
             <Image
-              src="/images/team/team.jpg"
-              alt="Đội ngũ Biển Đông Media"
+              src="/images/team/hanh-trinh-15.png"
+              alt="Hành trình 15+ năm kinh nghiệm của Biển Đông Media"
               fill
               sizes="(max-width: 1024px) 100vw, 520px"
-              className="object-cover"
+              className="object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white">
-              <div className="text-xs md:text-sm font-semibold uppercase tracking-wider opacity-90">Đội ngũ chuyên gia</div>
-              <div className="text-lg md:text-2xl font-bold">15+ năm kinh nghiệm</div>
-            </div>
           </div>
         </div>
         <div>
