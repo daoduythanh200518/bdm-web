@@ -21,13 +21,19 @@ export default function ServicesGrid() {
               href={`/dich-vu/${s.slug}`}
               className="group bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div
+                className={`relative aspect-[4/3] overflow-hidden ${
+                  s.imageFit === "contain" ? "bg-[#0a1930]" : ""
+                }`}
+              >
                 <Image
                   src={s.image}
                   alt={s.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={`${
+                    s.imageFit === "contain" ? "object-contain" : "object-cover"
+                  } group-hover:scale-105 transition-transform duration-500`}
                 />
               </div>
               <div className="p-5">

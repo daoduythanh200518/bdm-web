@@ -10,6 +10,7 @@ export type ServiceSummary = {
   short: string;
   price: string;
   image: string;
+  imageFit?: "cover" | "contain";
 };
 
 export type ServiceHighlight = {

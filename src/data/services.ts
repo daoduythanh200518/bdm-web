@@ -6,14 +6,16 @@ export const SERVICES: ServiceSummary[] = [
     title: "Thuê tài khoản Quảng cáo",
     short: "Facebook: Phí quản lý tài khoản: Chỉ từ 6%. Với sự phát triển mạnh mẽ…",
     price: "Từ 6% phí quản lý",
-    image: "/images/services/banner-dv1.jpg",
+    image: "/images/services/thue-tkqc-banner-01.png",
+    imageFit: "contain",
   },
   {
     slug: "tich-xanh-thuong-hieu",
     title: "Tích Xanh thương hiệu",
     short: "Mức giá: Chỉ từ 50tr. Tiktok, Instagram, Facebook. Đi kèm với dịch vụ này…",
     price: "Chỉ từ 50tr",
-    image: "/images/services/tich-xanh-banner.jpg",
+    image: "/images/services/tich-xanh-banner-01.png",
+    imageFit: "contain",
   },
   {
     slug: "booking-bao-pr",
@@ -38,7 +40,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     subtitle: "Facebook, TikTok, Google — phí quản lý chỉ từ 6%",
     price: "Từ 6% phí quản lý",
     heroVariant: "orange",
-    image: "/images/services/banner-dv1.jpg",
+    image: "/images/services/thue-tkqc-banner-01.png",
+    imageFit: "contain",
     intro:
       "Với sự phát triển mạnh mẽ của thị trường quảng cáo trực tuyến, việc sở hữu tài khoản quảng cáo ổn định, bền bỉ là yếu tố sống còn của mọi doanh nghiệp. Biển Đông Media cung cấp dịch vụ thuê tài khoản quảng cáo Facebook, TikTok, Google với giá cạnh tranh nhất thị trường.",
     highlights: [
@@ -92,7 +95,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     subtitle: "Xác minh tích xanh Facebook, TikTok, Instagram",
     price: "Chỉ từ 50 triệu",
     heroVariant: "blue",
-    image: "/images/services/tich-xanh-banner.jpg",
+    image: "/images/services/tich-xanh-banner-01.png",
     imageFit: "contain",
     intro:
       "Tích xanh là dấu xác thực quan trọng giúp nâng tầm thương hiệu, tăng uy tín và niềm tin với khách hàng. Biển Đông Media hỗ trợ xác minh tích xanh trên Facebook, TikTok, Instagram cho cả cá nhân và doanh nghiệp.",
