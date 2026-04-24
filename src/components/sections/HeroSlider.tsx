@@ -7,13 +7,24 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import HotlineButton from "@/components/ui/HotlineButton";
 
-const SLIDES = [
+type Slide = {
+  eyebrow: string;
+  title: string;
+  desc: string;
+  image: string;
+  overlay: string;
+  /** Ảnh đã là banner chứa sẵn text/mockup — dùng contain + blur + overlay mạnh để text hero nổi lên */
+  bannerImage?: boolean;
+};
+
+const SLIDES: Slide[] = [
   {
     eyebrow: "CÔNG TY TRUYỀN THÔNG MẠNG XÃ HỘI SỐ 1 VIỆT NAM",
     title: "Biển Đông Media",
     desc: "Cung cấp tài khoản quảng cáo: Facebook, TikTok, Google… Dịch vụ Facebook, Google, TikTok, Instagram, Booking truyền thông, KOLs.",
     image: "/images/hero-anh-bia-bdm.png",
-    overlay: "from-[#f6a12a]/40 via-[#ff8a00]/25 to-[#c57100]/45",
+    overlay: "from-[#f6a12a]/80 via-[#ff8a00]/70 to-[#c57100]/85",
+    bannerImage: true,
   },
   {
     eyebrow: "ĐỐI TÁC CAO CẤP NHẤT CỦA FACEBOOK",
@@ -54,14 +65,22 @@ export default function HeroSlider() {
         <div className="embla__container">
           {SLIDES.map((s, i) => (
             <div className="embla__slide" key={i}>
-              <div className="relative w-full text-white overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px] lg:min-h-[600px] flex items-center bg-[#32373c]">
+              <div
+                className={`relative w-full text-white overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px] lg:min-h-[600px] flex items-center ${
+                  s.bannerImage ? "bg-[#f6a12a]" : "bg-[#32373c]"
+                }`}
+              >
                 <Image
                   src={s.image}
                   alt={s.title}
                   fill
                   priority={i === 0}
                   sizes="100vw"
-                  className="object-cover"
+                  className={
+                    s.bannerImage
+                      ? "object-contain md:object-cover object-center scale-95 md:scale-100 blur-[2px] md:blur-[1.5px] opacity-90"
+                      : "object-cover"
+                  }
                 />
                 <div className={`absolute inset-0 bg-gradient-to-br ${s.overlay} pointer-events-none`} />
                 <div className="absolute -top-20 -right-10 w-64 h-64 md:w-96 md:h-96 rounded-full bg-white/10 blur-3xl pointer-events-none" />
