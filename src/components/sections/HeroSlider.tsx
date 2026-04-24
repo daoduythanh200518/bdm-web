@@ -12,8 +12,8 @@ const SLIDES = [
     eyebrow: "CÔNG TY TRUYỀN THÔNG MẠNG XÃ HỘI SỐ 1 VIỆT NAM",
     title: "Biển Đông Media",
     desc: "Cung cấp tài khoản quảng cáo: Facebook, TikTok, Google… Dịch vụ Facebook, Google, TikTok, Instagram, Booking truyền thông, KOLs.",
-    image: "/images/hero-cover.jpg",
-    overlay: "from-[#f6a12a]/85 via-[#ff8a00]/70 to-[#c57100]/85",
+    image: "/images/hero-anh-bia-bdm.png",
+    overlay: "from-[#f6a12a]/40 via-[#ff8a00]/25 to-[#c57100]/45",
   },
   {
     eyebrow: "ĐỐI TÁC CAO CẤP NHẤT CỦA FACEBOOK",
