@@ -36,7 +36,7 @@ export default function PressPricingPage() {
       <section className="section-y bg-[var(--background)]">
         <div className="container-x">
           <div className="bg-[var(--muted-bg)] rounded-2xl p-4 md:p-5 mb-6 md:mb-8 text-[13px] md:text-[13.5px] text-[var(--foreground)]/80 border-l-4 border-[var(--primary)] leading-relaxed">
-            <strong>Lưu ý:</strong> Giá trên là giá list công khai, chưa bao gồm chiết khấu. Đặt combo 3+ bài sẽ được ưu đãi từ 10-25%. Bài dài hơn 1500 từ, bài có ảnh/video phụ sẽ tính phụ thu. Liên hệ hotline để được báo giá chi tiết và ưu đãi tốt nhất.
+            <strong>Lưu ý:</strong> Giá báo thay đổi liên tục nên Khách hàng vui lòng liên hệ hotline để được báo giá chi tiết và ưu đãi tốt nhất.
           </div>
 
           {/* Mobile: card stack */}
