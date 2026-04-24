@@ -35,7 +35,7 @@ export default function PressPricingPage() {
 
       <section className="section-y bg-[var(--background)]">
         <div className="container-x">
-          <div className="bg-[var(--muted-bg)] rounded-2xl p-4 md:p-5 mb-6 md:mb-8 text-[13px] md:text-[13.5px] text-[var(--foreground)]/80 border-l-4 border-[var(--primary)] leading-relaxed">
+          <div className="bg-[var(--muted-bg)] rounded-2xl p-4 md:p-5 mb-6 md:mb-8 text-[14px] md:text-[15px] text-[var(--foreground)] border border-[var(--primary)]/30 leading-relaxed font-bold text-center">
             <strong>Lưu ý:</strong> Giá báo thay đổi liên tục nên Khách hàng vui lòng liên hệ hotline để được báo giá chi tiết và ưu đãi tốt nhất.
           </div>
 
