@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+
+// Tắt JIT của zod: nó thử gọi Function("") để dò eval → vi phạm CSP (không có 'unsafe-eval')
+z.config({ jitless: true });
 import { Phone, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { SITE } from "@/config/site";

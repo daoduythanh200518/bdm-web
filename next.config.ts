@@ -1,5 +1,26 @@
 import type { NextConfig } from "next";
 
+/**
+ * CSP: site chỉ tải tài nguyên cùng origin (font tự host qua next/font, ảnh local).
+ * 'unsafe-inline' cho script là bắt buộc với trang static (Next chèn inline RSC payload,
+ * next-themes chèn script chống nháy theme); dùng nonce sẽ buộc mọi trang render động.
+ * Dev cần 'unsafe-eval' cho React Refresh.
+ */
+const isDev = process.env.NODE_ENV !== "production";
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob:",
+  "font-src 'self' data:",
+  "connect-src 'self'",
+  "frame-ancestors 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  ...(isDev ? [] : ["upgrade-insecure-requests"]),
+].join("; ");
+
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -17,6 +38,7 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: [
+          { key: "Content-Security-Policy", value: contentSecurityPolicy },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
