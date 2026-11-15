@@ -2,13 +2,14 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+const noopSubscribe = () => () => {};
 
 export default function ThemeToggle({ className = "" }: { className?: string }) {
   const { theme, resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  // false khi render server/hydrate, true trên client — tránh lệch icon theme khi hydrate
+  const mounted = useSyncExternalStore(noopSubscribe, () => true, () => false);
 
   const current = mounted ? (theme === "system" ? resolvedTheme : theme) : undefined;
   const isDark = current === "dark";
@@ -19,7 +20,7 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Chuyển sang chế độ sáng" : "Chuyển sang chế độ tối"}
       title={isDark ? "Chế độ sáng" : "Chế độ tối"}
-      className={`relative inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border)] bg-[var(--muted-bg)] text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white hover:border-[var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] transition-all ${className}`}
+      className={`relative inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border)] bg-[var(--muted-bg)] text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] hover:border-[var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--background)] transition-all ${className}`}
     >
       <Sun
         size={16}
