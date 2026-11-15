@@ -141,7 +141,7 @@ export default function HeroSlider() {
           <button
             key={i}
             onClick={() => emblaApi?.scrollTo(i)}
-            className="px-1 py-2 inline-flex items-center"
+            className="min-w-6 min-h-6 px-0.5 inline-flex items-center justify-center"
             aria-label={`Slide ${i + 1}`}
           >
             <span
