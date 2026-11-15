@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import PageHeader from "@/components/sections/PageHeader";
 import { SERVICES } from "@/data/services";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Dịch vụ",
   description:
     "Dịch vụ của Biển Đông Media: thuê tài khoản quảng cáo Facebook/TikTok/Google, tích xanh thương hiệu, booking báo PR, KOLs, truyền thông tổng hợp.",
-};
+  path: "/dich-vu",
+});
 
 export default function ServicesIndexPage() {
   return (

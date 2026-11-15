@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
 import PageHeader from "@/components/sections/PageHeader";
 import ContactBanner from "@/components/sections/ContactBanner";
 import { SITE } from "@/config/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Liên hệ",
   description:
     "Liên hệ Biển Đông Media để được tư vấn miễn phí các dịch vụ thuê tài khoản quảng cáo, tích xanh, booking báo PR. Hotline 0327 345 555.",
-};
+  path: "/lien-he",
+});
 
 export default function ContactPage() {
   return (

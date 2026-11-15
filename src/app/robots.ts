@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/config/site";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL || SITE.url;
+// Dùng chung SITE.url với canonical/og:url để tránh lệch domain
+const BASE = SITE.url;
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -3,7 +3,8 @@ import { SERVICE_DETAILS } from "@/data/services";
 import { NEWS } from "@/data/news";
 import { SITE } from "@/config/site";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL || SITE.url;
+// Dùng chung SITE.url với canonical/og:url để tránh lệch domain
+const BASE = SITE.url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

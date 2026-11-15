@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import PageHeader from "@/components/sections/PageHeader";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CallToAction from "@/components/ui/CallToAction";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Báo giá",
   description:
     "Bảng giá thuê tài khoản quảng cáo Facebook, TikTok, Google và các dịch vụ truyền thông của Biển Đông Media. Giá cạnh tranh, minh bạch.",
-};
+  path: "/bao-gia",
+});
 
 const PACKAGES = [
   {

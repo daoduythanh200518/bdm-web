@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import PageHeader from "@/components/sections/PageHeader";
 import StatsCounter from "@/components/sections/StatsCounter";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { CheckCircle2, Award, Users, TrendingUp } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Giới thiệu",
   description:
     "Biển Đông Media — công ty truyền thông mạng xã hội số 1 Việt Nam, đối tác cao cấp nhất của Facebook. Hơn 1000 đối tác doanh nghiệp tin dùng.",
-};
+  path: "/gioi-thieu",
+});
 
 export default function AboutPage() {
   return (

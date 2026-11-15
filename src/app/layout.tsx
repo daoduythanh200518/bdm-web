@@ -7,6 +7,8 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Toaster } from "sonner";
 import { SITE } from "@/config/site";
+import JsonLd from "@/components/seo/JsonLd";
+import { organizationJsonLd } from "@/lib/seo";
 
 const beVietnam = Be_Vietnam_Pro({
   variable: "--font-be-vietnam",
@@ -22,18 +24,20 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
+  // Mặc định cho trang không tự khai báo; mỗi trang dùng buildPageMetadata() để có og:url/canonical riêng
   openGraph: {
     title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
-    url: SITE.url,
     siteName: SITE.name,
     locale: "vi_VN",
     type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
+    images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -44,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${beVietnam.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
+        <JsonLd data={organizationJsonLd()} />
         <ThemeProvider>
           <a
             href="#main-content"

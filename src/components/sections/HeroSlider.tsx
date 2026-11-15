@@ -3,6 +3,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import HotlineButton from "@/components/ui/HotlineButton";
@@ -63,7 +64,10 @@ export default function HeroSlider() {
     <section className="relative">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {SLIDES.map((s, i) => (
+          {SLIDES.map((s, i) => {
+            // Chỉ slide đầu là H1 — mỗi trang chỉ nên có đúng 1 thẻ H1 cho SEO
+            const Heading = i === 0 ? "h1" : "h2";
+            return (
             <div className="embla__slide" key={i}>
               <div
                 className={`relative w-full text-white overflow-hidden min-h-[420px] sm:min-h-[480px] md:min-h-[540px] lg:min-h-[600px] flex items-center ${
@@ -74,7 +78,9 @@ export default function HeroSlider() {
                   src={s.image}
                   alt={s.title}
                   fill
-                  priority={i === 0}
+                  // fetchPriority thay vì preload: không chiếm băng thông của ảnh LCP trên mobile (ảnh About)
+                  loading={i === 0 ? "eager" : "lazy"}
+                  fetchPriority={i === 0 ? "high" : "auto"}
                   sizes="100vw"
                   className={
                     s.bannerImage
@@ -88,26 +94,27 @@ export default function HeroSlider() {
                 <div className="container-x relative z-10 py-14 md:py-20">
                   <div className="max-w-3xl mx-auto text-center lg:text-left lg:mx-0">
                     <div className="hero-eyebrow">{s.eyebrow}</div>
-                    <h1 className="text-[32px] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-5 leading-[1.1] whitespace-pre-line tracking-tight text-white [text-shadow:0_0_8px_rgba(255,255,255,0.6),0_0_24px_rgba(255,255,255,0.45),0_2px_6px_rgba(255,255,255,0.35)]">
+                    <Heading className="text-[32px] sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-5 leading-[1.1] whitespace-pre-line tracking-tight text-white [text-shadow:0_0_8px_rgba(255,255,255,0.6),0_0_24px_rgba(255,255,255,0.45),0_2px_6px_rgba(255,255,255,0.35)]">
                       {s.title}
-                    </h1>
+                    </Heading>
                     <p className="text-[14px] sm:text-[15px] md:text-lg mb-6 md:mb-7 max-w-2xl mx-auto lg:mx-0 opacity-95 leading-relaxed whitespace-pre-line">
                       {s.desc}
                     </p>
                     <div className="flex flex-wrap gap-2.5 md:gap-3 justify-center lg:justify-start">
                       <HotlineButton variant="white" className="!text-[var(--primary)]" iconSize={16} />
-                      <a
+                      <Link
                         href="/dich-vu"
                         className="btn btn-outline !border-white !text-white hover:!bg-white hover:!text-[var(--primary)]"
                       >
                         Xem dịch vụ
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -128,18 +135,23 @@ export default function HeroSlider() {
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      {/* Dots — nút có padding để vùng bấm ≥24px (chuẩn a11y), chấm hiển thị vẫn nhỏ */}
+      <div className="absolute bottom-2 md:bottom-3 left-1/2 -translate-x-1/2 flex z-10">
         {SLIDES.map((_, i) => (
           <button
             key={i}
             onClick={() => emblaApi?.scrollTo(i)}
-            className={`h-2 md:h-2.5 rounded-full transition-all ${
-              i === selected
-                ? "bg-white w-7 md:w-8"
-                : "bg-white/50 w-2 md:w-2.5"
-            }`}
+            className="px-1 py-2 inline-flex items-center"
             aria-label={`Slide ${i + 1}`}
-          />
+          >
+            <span
+              className={`block h-2 md:h-2.5 rounded-full transition-all ${
+                i === selected
+                  ? "bg-white w-7 md:w-8"
+                  : "bg-white/50 w-2 md:w-2.5"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </section>

@@ -31,7 +31,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
                 src={data.image}
                 alt={data.title}
                 fill
-                priority
+                preload
                 sizes="(max-width: 1024px) 100vw, 520px"
                 className={data.imageFit === "contain" ? "object-contain" : "object-cover"}
               />

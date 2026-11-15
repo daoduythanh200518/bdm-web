@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import PageHeader from "@/components/sections/PageHeader";
 import { NEWS } from "@/data/news";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Tin tức mới",
   description:
     "Tin tức mới nhất về quảng cáo Facebook, TikTok, Google, Instagram. Cập nhật xu hướng Digital Marketing, case study và chia sẻ kinh nghiệm từ Biển Đông Media.",
-};
+  path: "/tin-tuc",
+});
 
 export default function NewsIndexPage() {
   const [featured, ...rest] = NEWS;

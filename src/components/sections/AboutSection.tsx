@@ -11,6 +11,8 @@ export default function AboutSection() {
               src="/images/team/hanh-trinh-15.png"
               alt="Hành trình 15+ năm kinh nghiệm của Biển Đông Media"
               fill
+              // Ảnh này là LCP trên mobile (nằm ngay dưới hero) → không lazy-load
+              loading="eager"
               sizes="(max-width: 1024px) 100vw, 520px"
               className="object-contain"
             />

@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 import PageHeader from "@/components/sections/PageHeader";
 import { NEWS } from "@/data/news";
+import JsonLd from "@/components/seo/JsonLd";
+import { articleJsonLd, buildPageMetadata, newsShareImage, toIsoDate } from "@/lib/seo";
 
 export function generateStaticParams() {
   return NEWS.map((n) => ({ slug: n.slug }));
@@ -16,7 +18,14 @@ export async function generateMetadata(
   const { slug } = await props.params;
   const item = NEWS.find((n) => n.slug === slug);
   if (!item) return { title: "Không tìm thấy bài viết" };
-  return { title: item.title, description: item.excerpt };
+  return buildPageMetadata({
+    title: item.title,
+    description: item.excerpt,
+    path: `/tin-tuc/${slug}`,
+    image: newsShareImage(slug),
+    type: "article",
+    publishedTime: toIsoDate(item.date),
+  });
 }
 
 export default async function NewsDetailPage(
@@ -31,6 +40,7 @@ export default async function NewsDetailPage(
 
   return (
     <>
+      <JsonLd data={articleJsonLd(item)} />
       <PageHeader
         title={item.title}
         crumbs={[
@@ -58,7 +68,7 @@ export default async function NewsDetailPage(
               src={item.image}
               alt={item.title}
               fill
-              priority
+              preload
               sizes="(max-width: 896px) 100vw, 896px"
               className="object-cover"
             />

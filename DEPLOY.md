@@ -96,7 +96,6 @@ Vào project Vercel → **Settings → Environment Variables** → thêm 4 biế
 | `RESEND_API_KEY` | `re_xxxxxxxxxxxxxxxxxxxxx` (lấy từ bước 4) |
 | `CONTACT_TO` | `hotro@biendongmedia.vn` |
 | `CONTACT_FROM` | `Biển Đông Media <no-reply@biendongmedia.vn>` |
-| `NEXT_PUBLIC_SITE_URL` | `https://biendongmedia.vn` |
 
 Sau khi thêm → **Deployments → ... → Redeploy** để biến mới có hiệu lực.
 

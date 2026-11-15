@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 import PageHeader from "@/components/sections/PageHeader";
 import CallToAction from "@/components/ui/CallToAction";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Báo giá Báo chí",
   description:
     "Bảng giá booking đăng bài PR trên các đầu báo lớn: VNExpress, VTV, Zing, Thanh Niên, Dân Trí. Giá ưu đãi cho đối tác của Biển Đông Media.",
-};
+  path: "/bao-gia/bao",
+});
 
 const PRESS_PRICES = [
   { outlet: "VNExpress", category: "Kinh doanh / Khởi nghiệp", price: "20.000.000 đ", turn: "24-48h" },

@@ -107,18 +107,23 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-2 mt-8">
+        {/* Nút có padding để vùng bấm ≥24px (chuẩn a11y), chấm hiển thị vẫn nhỏ */}
+        <div className="flex justify-center mt-6">
           {TESTIMONIALS.map((_, i) => (
             <button
               key={i}
               onClick={() => emblaApi?.scrollTo(i)}
-              className={`h-2.5 rounded-full transition-all ${
-                i === selected
-                  ? "bg-[var(--primary)] w-8"
-                  : "bg-[var(--border)] w-2.5"
-              }`}
+              className="px-1 py-2 inline-flex items-center"
               aria-label={`Đến testimonial ${i + 1}`}
-            />
+            >
+              <span
+                className={`block h-2.5 rounded-full transition-all ${
+                  i === selected
+                    ? "bg-[var(--primary)] w-8"
+                    : "bg-[var(--border)] w-2.5"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
