@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <section className="min-h-[70vh] flex items-center bg-[var(--soft-bg)]">
       <div className="container-x text-center py-16">
-        <div className="text-[var(--primary)] text-[140px] md:text-[180px] font-extrabold leading-none">
+        <div className="text-[var(--primary-text)] text-[140px] md:text-[180px] font-extrabold leading-none">
           404
         </div>
         <h1 className="text-2xl md:text-3xl font-extrabold mt-2 mb-4">

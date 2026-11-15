@@ -36,7 +36,7 @@ export default function Header() {
       <div className="container-x flex items-center justify-between h-[60px] md:h-[68px] gap-3">
         {/* Logo (text only) */}
         <Link href="/" className="flex flex-col leading-tight shrink-0" aria-label="Biển Đông Media">
-          <span className="font-extrabold text-[16px] md:text-[19px] tracking-tight text-[var(--primary)]">
+          <span className="font-extrabold text-[16px] md:text-[19px] tracking-tight text-[var(--primary-text)]">
             BIỂN ĐÔNG MEDIA
           </span>
           <span className="hidden sm:block text-[10px] md:text-[11px] text-[var(--muted)] uppercase tracking-[0.18em]">
@@ -50,7 +50,7 @@ export default function Header() {
             <div key={item.href} className="relative group">
               <Link
                 href={item.href}
-                className="px-2.5 xl:px-3 py-2 text-[13.5px] xl:text-[14px] font-medium text-[var(--foreground)] hover:text-[var(--primary)] flex items-center gap-1 transition-colors whitespace-nowrap"
+                className="px-2.5 xl:px-3 py-2 text-[13.5px] xl:text-[14px] font-medium text-[var(--foreground)] hover:text-[var(--primary-text)] flex items-center gap-1 transition-colors whitespace-nowrap"
               >
                 {item.label}
                 {item.children && <ChevronDown size={14} />}
@@ -61,7 +61,7 @@ export default function Header() {
                     <Link
                       key={c.href}
                       href={c.href}
-                      className="block px-4 py-3 text-[14px] text-[var(--foreground)] hover:bg-[var(--muted-bg)] hover:text-[var(--primary)] transition-colors"
+                      className="block px-4 py-3 text-[14px] text-[var(--foreground)] hover:bg-[var(--muted-bg)] hover:text-[var(--primary-text)] transition-colors"
                     >
                       {c.label}
                     </Link>
@@ -86,7 +86,7 @@ export default function Header() {
           <a
             href={`tel:${SITE.hotlineRaw}`}
             aria-label="Gọi hotline"
-            className="md:hidden w-9 h-9 rounded-full bg-[var(--primary)] text-white flex items-center justify-center"
+            className="md:hidden w-9 h-9 rounded-full bg-[var(--primary)] text-[var(--primary-foreground)] flex items-center justify-center"
           >
             <Phone size={16} />
           </a>
@@ -124,7 +124,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 font-medium border-b border-[var(--border)] text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
+                    className="block px-4 py-3 font-medium border-b border-[var(--border)] text-[var(--foreground)] hover:text-[var(--primary-text)] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -135,7 +135,7 @@ export default function Header() {
                           key={c.href}
                           href={c.href}
                           onClick={() => setOpen(false)}
-                          className="block px-8 py-2.5 text-[13px] text-[var(--muted)] hover:text-[var(--primary)] transition-colors"
+                          className="block px-8 py-2.5 text-[13px] text-[var(--muted)] hover:text-[var(--primary-text)] transition-colors"
                         >
                           → {c.label}
                         </Link>

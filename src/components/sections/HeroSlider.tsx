@@ -101,10 +101,10 @@ export default function HeroSlider() {
                       {s.desc}
                     </p>
                     <div className="flex flex-wrap gap-2.5 md:gap-3 justify-center lg:justify-start">
-                      <HotlineButton variant="white" className="!text-[var(--primary)]" iconSize={16} />
+                      <HotlineButton variant="white" className="!text-[var(--primary-text)]" iconSize={16} />
                       <Link
                         href="/dich-vu"
-                        className="btn btn-outline !border-white !text-white hover:!bg-white hover:!text-[var(--primary)]"
+                        className="btn btn-outline !border-white !text-white hover:!bg-white hover:!text-[var(--primary-text)]"
                       >
                         Xem dịch vụ
                       </Link>

@@ -82,7 +82,7 @@ export default function Testimonials() {
                 key={i}
               >
                 <div className="bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl p-5 md:p-7 shadow-sm border border-[var(--border)] h-full">
-                  <Quote size={36} className="text-[var(--primary)] mb-4" />
+                  <Quote size={36} className="text-[var(--primary-text)] mb-4" />
                   <p className="text-[15px] text-[var(--foreground)]/80 italic leading-relaxed mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>

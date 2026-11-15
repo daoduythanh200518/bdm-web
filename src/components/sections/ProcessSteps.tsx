@@ -20,11 +20,11 @@ export default function ProcessSteps() {
               key={s.n}
               className="relative bg-[var(--soft-bg)] rounded-2xl p-5 md:p-7 hover:shadow-xl transition-all hover:bg-[var(--card)] border border-[var(--border)]"
             >
-              <div className="text-5xl md:text-6xl font-extrabold text-[var(--primary)]/20 absolute top-2 right-4 select-none">
+              <div className="text-5xl md:text-6xl font-extrabold text-[var(--primary-text)]/20 absolute top-2 right-4 select-none">
                 {s.n}
               </div>
               <div className="relative">
-                <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-bold text-base md:text-lg mb-3 md:mb-4">
+                <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-[var(--primary)] text-[var(--primary-foreground)] flex items-center justify-center font-bold text-base md:text-lg mb-3 md:mb-4">
                   {s.n}
                 </div>
                 <p className="text-[14px] md:text-[14.5px] text-[var(--foreground)]/80 leading-relaxed">

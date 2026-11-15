@@ -51,7 +51,7 @@ export default function ContactPage() {
           ].map((c, i) => {
             const Body = (
               <>
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center mx-auto mb-3 md:mb-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--primary)]/10 text-[var(--primary-text)] flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <c.icon size={22} />
                 </div>
                 <div className="font-bold text-[14.5px] md:text-[15px] mb-2">{c.title}</div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
       <section className="py-10 md:py-12 bg-[var(--soft-bg)]">
         <div className="container-x">
           <div className="bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl p-5 sm:p-7 md:p-10 border border-[var(--border)] grid grid-cols-[auto_1fr] gap-4 md:gap-6 items-start md:items-center">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[var(--primary)]/10 text-[var(--primary-text)] flex items-center justify-center shrink-0">
               <Clock size={24} />
             </div>
             <div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
               <div className="text-[13.5px] md:text-[14.5px] text-[var(--foreground)]/80 space-y-1">
                 <p>Thứ Hai - Thứ Bảy: 08:00 - 18:00</p>
                 <p>Chủ nhật: Nghỉ (hỗ trợ khẩn cấp qua hotline)</p>
-                <p className="text-[var(--primary)] font-semibold mt-2">
+                <p className="text-[var(--primary-text)] font-semibold mt-2">
                   ✓ Hỗ trợ kỹ thuật quảng cáo 24/7 qua Zalo & Messenger
                 </p>
               </div>

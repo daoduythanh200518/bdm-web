@@ -23,7 +23,7 @@ export default function PartnersCarousel() {
     <section className="py-10 md:py-14 bg-[var(--background)] border-y border-[var(--border)]">
       <div className="container-x">
         <div className="text-center mb-6 md:mb-8">
-          <div className="text-[var(--primary)] font-semibold text-[12px] md:text-[13px] tracking-wider uppercase mb-2">
+          <div className="text-[var(--primary-text)] font-semibold text-[12px] md:text-[13px] tracking-wider uppercase mb-2">
             Đối tác báo chí
           </div>
           <h3 className="text-[22px] md:text-2xl lg:text-3xl font-bold">

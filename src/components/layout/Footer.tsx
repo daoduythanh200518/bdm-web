@@ -24,9 +24,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-bold mb-4 text-[16px] tracking-wide !text-[#f6a12a]">
+          <h2 className="font-bold mb-4 text-[16px] tracking-wide !text-[#f6a12a]">
             Liên kết nhanh
-          </h4>
+          </h2>
           <ul className="space-y-2 text-[13px]">
             {NAV.slice(0, 5).map((n) => (
               <li key={n.href}>
@@ -42,9 +42,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-bold mb-4 text-[16px] tracking-wide !text-[#f6a12a]">
+          <h2 className="font-bold mb-4 text-[16px] tracking-wide !text-[#f6a12a]">
             Dịch vụ
-          </h4>
+          </h2>
           <ul className="space-y-2 text-[13px]">
             <li>
               <Link
@@ -82,9 +82,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-bold mb-4 text-[16px] tracking-wide !text-[#f6a12a]">
+          <h2 className="font-bold mb-4 text-[16px] tracking-wide !text-[#f6a12a]">
             Liên hệ
-          </h4>
+          </h2>
           <ul className="space-y-3 text-[13px]">
             <li className="flex gap-2">
               <MapPin size={16} className="shrink-0 mt-0.5 text-[var(--primary)]" />
@@ -112,7 +112,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-x py-5 text-[12px] text-gray-500 flex flex-col md:flex-row justify-between gap-2">
+        <div className="container-x py-5 text-[12px] text-gray-400 flex flex-col md:flex-row justify-between gap-2">
           <span>
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </span>

@@ -29,7 +29,7 @@ function Stat({ num, suffix, label, start }: typeof STATS[0] & { start: boolean 
   const v = useCountUp(num, 1500, start);
   return (
     <div className="text-center">
-      <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-1.5 md:mb-2 drop-shadow-lg leading-none">
+      <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-1.5 md:mb-2 leading-none">
         {v.toLocaleString("vi-VN")}
         {suffix}
       </div>
@@ -55,13 +55,13 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section className="bg-[var(--primary)] text-white py-12 md:py-16">
+    <section className="bg-[var(--primary)] text-[var(--primary-foreground)] py-12 md:py-16">
       <div className="container-x" ref={ref}>
         <div className="text-center mb-8 md:mb-10">
           <h2 className="text-[22px] md:text-3xl font-extrabold mb-3">
             Những con số ấn tượng
           </h2>
-          <p className="text-white/90 max-w-2xl mx-auto text-[13.5px] md:text-[14.5px] leading-relaxed">
+          <p className="text-[var(--primary-foreground)]/90 max-w-2xl mx-auto text-[13.5px] md:text-[14.5px] leading-relaxed">
             Chi tiêu 100 tỷ VNĐ trong vòng 3 tháng từ quảng cáo Facebook. Luôn là đối tác cấp cao nhất ở Việt Nam. Đặc quyền ưu tiên khi sử dụng Facebook.
           </p>
         </div>

@@ -50,7 +50,7 @@ export default function PressPricingPage() {
               >
                 <div className="flex items-start justify-between gap-3 mb-1">
                   <div className="font-bold text-[15px] min-w-0 flex-1">{p.outlet}</div>
-                  <div className="text-[var(--primary)] font-bold text-[14px] whitespace-nowrap">
+                  <div className="text-[var(--primary-text)] font-bold text-[14px] whitespace-nowrap">
                     {p.price}
                   </div>
                 </div>
@@ -66,7 +66,7 @@ export default function PressPricingPage() {
           {/* Desktop / tablet: table */}
           <div className="hidden md:block table-scroll bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl shadow-sm border border-[var(--border)]">
             <table className="w-full text-[14px]">
-              <thead className="bg-[var(--primary)] text-white">
+              <thead className="bg-[var(--primary)] text-[var(--primary-foreground)]">
                 <tr>
                   <th className="text-left p-4 font-semibold whitespace-nowrap">Đầu báo</th>
                   <th className="text-left p-4 font-semibold">Chuyên mục</th>
@@ -82,7 +82,7 @@ export default function PressPricingPage() {
                   >
                     <td className="p-4 font-bold whitespace-nowrap">{p.outlet}</td>
                     <td className="p-4 text-[var(--foreground)]/80">{p.category}</td>
-                    <td className="p-4 text-right font-bold text-[var(--primary)] whitespace-nowrap">{p.price}</td>
+                    <td className="p-4 text-right font-bold text-[var(--primary-text)] whitespace-nowrap">{p.price}</td>
                     <td className="p-4 text-center text-[var(--muted)] whitespace-nowrap">{p.turn}</td>
                   </tr>
                 ))}

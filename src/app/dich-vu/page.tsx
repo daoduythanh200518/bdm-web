@@ -41,17 +41,17 @@ export default function ServicesIndexPage() {
                 </div>
                 <div className="sm:w-3/5 p-5 md:p-6 flex flex-col justify-between flex-1">
                   <div>
-                    <div className="text-[var(--primary)] font-bold text-[12px] md:text-[13px] mb-1.5 md:mb-2 uppercase tracking-wider">
+                    <div className="text-[var(--primary-text)] font-bold text-[12px] md:text-[13px] mb-1.5 md:mb-2 uppercase tracking-wider">
                       {s.price}
                     </div>
-                    <h3 className="text-lg md:text-xl font-extrabold mb-2 md:mb-3 group-hover:text-[var(--primary)] transition-colors leading-snug">
+                    <h3 className="text-lg md:text-xl font-extrabold mb-2 md:mb-3 group-hover:text-[var(--primary-text)] transition-colors leading-snug">
                       {s.title}
                     </h3>
                     <p className="text-[13.5px] md:text-[14px] text-[var(--muted)] leading-relaxed mb-3 md:mb-4">
                       {s.short}
                     </p>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-[13px] md:text-[13.5px] font-semibold text-[var(--primary)]">
+                  <span className="inline-flex items-center gap-1 text-[13px] md:text-[13.5px] font-semibold text-[var(--primary-text)]">
                     Xem chi tiết <ArrowRight size={14} />
                   </span>
                 </div>

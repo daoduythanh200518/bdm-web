@@ -9,7 +9,10 @@
   --soft-bg: #fafafa;
   --primary: #f6a12a;
   --primary-hover: #e0901a;
-  --primary-foreground: #ffffff;
+  /* Chữ trên nền cam: tối để đạt tương phản WCAG AA (trắng/cam chỉ 2.08:1) */
+  --primary-foreground: #1a1a1a;
+  /* Chữ cam trên nền sáng: cam đậm 5:1 thay cho #f6a12a (2.08:1) */
+  --primary-text: #b45309;
   --secondary: #1d98e8;
   --secondary-hover: #0f7ac2;
   --dark: #32373c;
@@ -28,6 +31,7 @@
   --primary: #f6a12a;
   --primary-hover: #ffb84d;
   --primary-foreground: #0a0a0b;
+  --primary-text: #f6a12a;
   --secondary: #38bdf8;
   --secondary-hover: #0ea5e9;
   --dark: #09090b;
@@ -103,9 +107,9 @@ h1, h2, h3, h4, h5, h6 {
 .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
 .btn-primary { background: var(--primary); color: var(--primary-foreground); box-shadow: 0 2px 8px rgba(246,161,42,.25); }
 .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(246,161,42,.35); }
-.btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-.btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-1px); }
-.btn-white { background: #fff; color: var(--primary); }
+.btn-outline { background: transparent; color: var(--primary-text); border: 2px solid var(--primary); }
+.btn-outline:hover { background: var(--primary); color: var(--primary-foreground); transform: translateY(-1px); }
+.btn-white { background: #fff; color: var(--primary-text); }
 .btn-white:hover { background: #f3f4f6; transform: translateY(-1px); }
 .btn-secondary { background: var(--secondary); color: #fff; }
 .btn-secondary:hover { background: var(--secondary-hover); transform: translateY(-1px); }
@@ -166,7 +170,7 @@ select:focus-visible,
   transition: background-color .2s ease, color .2s ease, transform .15s ease;
 }
 @media (min-width: 768px) { .carousel-arrow { width: 44px; height: 44px; } }
-.carousel-arrow:hover { background: var(--primary); color: #fff; border-color: var(--primary); transform: scale(1.05); }
+.carousel-arrow:hover { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); transform: scale(1.05); }
 .carousel-arrow:active { transform: scale(0.95); }
 
 /* Floating CTA: right column on desktop, bottom bar on mobile */

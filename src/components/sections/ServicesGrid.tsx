@@ -37,16 +37,16 @@ export default function ServicesGrid() {
                 />
               </div>
               <div className="p-5">
-                <h3 className="font-bold text-[17px] mb-2 group-hover:text-[var(--primary)] transition-colors">
+                <h3 className="font-bold text-[17px] mb-2 group-hover:text-[var(--primary-text)] transition-colors">
                   {s.title}
                 </h3>
-                <div className="text-[13px] font-semibold text-[var(--primary)] mb-2">
+                <div className="text-[13px] font-semibold text-[var(--primary-text)] mb-2">
                   {s.price}
                 </div>
                 <p className="text-[13.5px] text-[var(--muted)] line-clamp-3 mb-4">
                   {s.short}
                 </p>
-                <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--primary)]">
+                <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--primary-text)]">
                   Xem thêm <ArrowRight size={14} />
                 </span>
               </div>

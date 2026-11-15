@@ -52,7 +52,7 @@ export default async function NewsDetailPage(
       <article className="section-y bg-[var(--background)]">
         <div className="container-x max-w-4xl">
           <div className="flex items-center flex-wrap gap-2 md:gap-4 text-[12px] md:text-[13px] text-[var(--muted)] mb-5 md:mb-6">
-            <span className="bg-[var(--primary)]/10 text-[var(--primary)] px-3 py-1 rounded-full font-semibold uppercase tracking-wider text-[10.5px] md:text-[11px]">
+            <span className="bg-[var(--primary)]/10 text-[var(--primary-text)] px-3 py-1 rounded-full font-semibold uppercase tracking-wider text-[10.5px] md:text-[11px]">
               {item.category}
             </span>
             <span className="flex items-center gap-1">
@@ -118,7 +118,7 @@ export default async function NewsDetailPage(
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold text-[15.5px] mb-2 group-hover:text-[var(--primary)] transition-colors line-clamp-2">
+                  <h3 className="font-bold text-[15.5px] mb-2 group-hover:text-[var(--primary-text)] transition-colors line-clamp-2">
                     {r.title}
                   </h3>
                   <div className="text-[12px] text-[var(--muted)]">{r.date}</div>

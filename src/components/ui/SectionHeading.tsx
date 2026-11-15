@@ -10,7 +10,7 @@ type Props = {
 
 const TONES = {
   default: "",
-  primary: "text-[var(--primary)]",
+  primary: "text-[var(--primary-text)]",
   white: "!text-white",
 };
 
@@ -32,7 +32,7 @@ export default function SectionHeading({
   return (
     <div className={`${align === "center" ? "text-center mb-8 md:mb-12" : "mb-6 md:mb-8"} ${className}`}>
       {eyebrow && (
-        <div className="text-[var(--primary)] font-semibold text-[12.5px] md:text-[13px] tracking-wider uppercase mb-2">
+        <div className="text-[var(--primary-text)] font-semibold text-[12.5px] md:text-[13px] tracking-wider uppercase mb-2">
           {eyebrow}
         </div>
       )}

@@ -91,24 +91,24 @@ export default function PricingPage() {
                 key={p.name}
                 className={`relative rounded-2xl p-6 md:p-7 border-2 transition-all ${
                   p.featured
-                    ? "bg-gradient-to-br from-[var(--primary)] to-[#c57100] text-white border-[var(--primary)] shadow-2xl lg:-translate-y-3 sm:col-span-2 lg:col-span-1"
+                    ? "bg-gradient-to-br from-[var(--primary)] to-[#c57100] text-[var(--primary-foreground)] border-[var(--primary)] shadow-2xl lg:-translate-y-3 sm:col-span-2 lg:col-span-1"
                     : "bg-[var(--card)] text-[var(--card-foreground)] border-[var(--border)] hover:border-[var(--primary)]/40 hover:shadow-xl"
                 }`}
               >
                 {p.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--card)] text-[var(--card-foreground)] text-[var(--primary)] px-4 py-1 rounded-full text-[11px] md:text-[12px] font-bold uppercase tracking-wider shadow-lg whitespace-nowrap">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--card)] text-[var(--card-foreground)] text-[var(--primary-text)] px-4 py-1 rounded-full text-[11px] md:text-[12px] font-bold uppercase tracking-wider shadow-lg whitespace-nowrap">
                     Phổ biến nhất
                   </div>
                 )}
-                <h3 className={`font-extrabold text-xl md:text-2xl mb-1 ${p.featured ? "text-white" : ""}`}>
+                <h3 className={`font-extrabold text-xl md:text-2xl mb-1 ${p.featured ? "text-[var(--primary-foreground)]" : ""}`}>
                   {p.name}
                 </h3>
-                <p className={`text-[12.5px] md:text-[13px] mb-5 md:mb-6 ${p.featured ? "text-white/90" : "text-[var(--muted)]"}`}>
+                <p className={`text-[12.5px] md:text-[13px] mb-5 md:mb-6 ${p.featured ? "text-[var(--primary-foreground)]/90" : "text-[var(--muted)]"}`}>
                   {p.subtitle}
                 </p>
                 <div className="mb-5 md:mb-6 flex items-end gap-2 flex-wrap">
                   <span className="text-4xl md:text-5xl font-extrabold leading-none">{p.price}</span>
-                  <span className={`text-[12.5px] md:text-[13px] pb-1 ${p.featured ? "text-white/85" : "text-[var(--muted)]"}`}>
+                  <span className={`text-[12.5px] md:text-[13px] pb-1 ${p.featured ? "text-[var(--primary-foreground)]/85" : "text-[var(--muted)]"}`}>
                     {p.priceNote}
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export default function PricingPage() {
                     <li key={f} className="flex items-start gap-2 text-[13.5px] md:text-[14px]">
                       <Check
                         size={18}
-                        className={`shrink-0 mt-0.5 ${p.featured ? "text-white" : "text-[var(--primary)]"}`}
+                        className={`shrink-0 mt-0.5 ${p.featured ? "text-[var(--primary-foreground)]" : "text-[var(--primary-text)]"}`}
                       />
                       <span>{f}</span>
                     </li>
@@ -152,7 +152,7 @@ export default function PricingPage() {
               >
                 <div className="flex items-start justify-between gap-3 mb-1.5">
                   <div className="font-bold text-[14.5px] min-w-0 flex-1">{s.name}</div>
-                  <div className="text-[var(--primary)] font-bold text-[14px] whitespace-nowrap">
+                  <div className="text-[var(--primary-text)] font-bold text-[14px] whitespace-nowrap">
                     {s.price}
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export default function PricingPage() {
 
           {/* Desktop: table */}
           <div className="hidden md:block bg-[var(--card)] text-[var(--card-foreground)] rounded-2xl overflow-hidden shadow-sm border border-[var(--border)]">
-            <div className="grid grid-cols-[2fr_1fr_1.2fr] bg-[var(--primary)] text-white font-semibold p-4 text-[14px]">
+            <div className="grid grid-cols-[2fr_1fr_1.2fr] bg-[var(--primary)] text-[var(--primary-foreground)] font-semibold p-4 text-[14px]">
               <div>Dịch vụ</div>
               <div>Mức giá</div>
               <div>Ghi chú</div>
@@ -178,7 +178,7 @@ export default function PricingPage() {
                 } border-t border-[var(--border)]`}
               >
                 <div className="font-semibold">{s.name}</div>
-                <div className="text-[var(--primary)] font-bold">{s.price}</div>
+                <div className="text-[var(--primary-text)] font-bold">{s.price}</div>
                 <div className="text-[13px] text-[var(--muted)]">{s.note}</div>
               </div>
             ))}

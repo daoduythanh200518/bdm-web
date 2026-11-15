@@ -13,7 +13,7 @@ export default function PageHeader({
   crumbs: Crumb[];
 }) {
   return (
-    <section className="relative bg-gradient-to-br from-[var(--primary)] via-[#e0901a] to-[#c57100] text-white py-10 md:py-14 lg:py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[var(--primary)] via-[#e0901a] to-[#c57100] text-[var(--primary-foreground)] py-10 md:py-14 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-0 right-10 w-60 md:w-72 h-60 md:h-72 rounded-full bg-white/20 blur-3xl" />
         <div className="absolute bottom-0 left-10 w-60 md:w-72 h-60 md:h-72 rounded-full bg-black/20 blur-3xl" />
@@ -36,7 +36,7 @@ export default function PageHeader({
             </span>
           ))}
         </nav>
-        <h1 className="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold drop-shadow mb-3 leading-[1.2]">
+        <h1 className="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 leading-[1.2]">
           {title}
         </h1>
         {subtitle && (

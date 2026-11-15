@@ -16,7 +16,7 @@ export default function Spinner({
       aria-label={label ?? "Đang tải"}
       className={`inline-flex items-center gap-2 text-[var(--muted)] ${className}`}
     >
-      <Loader2 size={size} className="animate-spin text-[var(--primary)]" />
+      <Loader2 size={size} className="animate-spin text-[var(--primary-text)]" />
       {label && <span className="text-[14px]">{label}</span>}
     </span>
   );

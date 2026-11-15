@@ -63,7 +63,7 @@ export default function FAQ() {
                 <span className="text-[13.5px] md:text-[15px] leading-snug">{f.q}</span>
                 <ChevronDown
                   size={20}
-                  className={`shrink-0 text-[var(--primary)] transition-transform ${
+                  className={`shrink-0 text-[var(--primary-text)] transition-transform ${
                     open === i ? "rotate-180" : ""
                   }`}
                 />

@@ -21,7 +21,7 @@ export default function CallToAction({
     <section
       className={
         isGradient
-          ? "section-y bg-gradient-to-br from-[var(--primary)] to-[#c57100] text-white"
+          ? "section-y bg-gradient-to-br from-[var(--primary)] to-[#c57100] text-[var(--primary-foreground)]"
           : "section-y bg-[var(--soft-bg)]"
       }
     >
@@ -40,7 +40,7 @@ export default function CallToAction({
             href={secondaryHref}
             className={
               isGradient
-                ? "btn btn-outline !border-white !text-white hover:!bg-white hover:!text-[var(--primary)]"
+                ? "btn btn-outline !border-[var(--primary-foreground)] !text-[var(--primary-foreground)] hover:!bg-[var(--primary-foreground)] hover:!text-white"
                 : "btn btn-outline"
             }
           >

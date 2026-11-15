@@ -19,7 +19,7 @@ export default function AboutSection() {
           </div>
         </div>
         <div>
-          <h2 className="text-[26px] md:text-3xl lg:text-4xl font-extrabold mb-2 text-[var(--primary)]">
+          <h2 className="text-[26px] md:text-3xl lg:text-4xl font-extrabold mb-2 text-[var(--primary-text)]">
             Biển Đông Media
           </h2>
           <p className="text-[var(--muted)] text-lg mb-5 font-medium">

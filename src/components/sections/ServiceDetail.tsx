@@ -49,7 +49,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
             </div>
           </div>
           <div>
-            <div className="inline-block bg-[var(--primary)]/10 text-[var(--primary)] px-3 py-1 rounded-full text-[11.5px] md:text-[12px] font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-block bg-[var(--primary)]/10 text-[var(--primary-text)] px-3 py-1 rounded-full text-[11.5px] md:text-[12px] font-semibold uppercase tracking-wider mb-3">
               {data.price}
             </div>
             <h2 className="text-2xl md:text-3xl font-extrabold mb-3 md:mb-4">
@@ -81,7 +81,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
                 key={i}
                 className="bg-[var(--card)] text-[var(--card-foreground)] p-5 md:p-6 rounded-2xl border border-[var(--border)] hover:shadow-xl hover:-translate-y-1 transition-all"
               >
-                <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">
+                <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[var(--primary)]/10 text-[var(--primary-text)] flex items-center justify-center font-bold text-lg md:text-xl mb-3 md:mb-4">
                   0{i + 1}
                 </div>
                 <h3 className="font-bold text-[15px] md:text-[16px] mb-2">{h.title}</h3>
@@ -103,7 +103,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle2
                     size={22}
-                    className="shrink-0 text-[var(--primary)] mt-0.5"
+                    className="shrink-0 text-[var(--primary-text)] mt-0.5"
                   />
                   <span className="text-[15px] text-[var(--foreground)]/85">{b}</span>
                 </li>
@@ -118,7 +118,7 @@ export default function ServiceDetailView({ data }: { data: SD }) {
                   key={i}
                   className="bg-[var(--muted-bg)] rounded-2xl p-6 border border-[var(--border)]"
                 >
-                  <h3 className="font-bold text-[17px] mb-3 text-[var(--primary)]">
+                  <h3 className="font-bold text-[17px] mb-3 text-[var(--primary-text)]">
                     {d.heading}
                   </h3>
                   <div className="space-y-2 text-[14.5px] text-[var(--foreground)]/80 leading-relaxed">

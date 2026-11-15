@@ -42,20 +42,20 @@ export default function NewsIndexPage() {
             </div>
             <div className="p-5 sm:p-6 md:p-8 lg:p-10">
               <div className="flex items-center flex-wrap gap-2 md:gap-3 text-[11.5px] md:text-[12px] text-[var(--muted)] mb-2 md:mb-3">
-                <span className="bg-[var(--primary)]/10 text-[var(--primary)] px-2.5 py-0.5 rounded font-semibold uppercase tracking-wider">
+                <span className="bg-[var(--primary)]/10 text-[var(--primary-text)] px-2.5 py-0.5 rounded font-semibold uppercase tracking-wider">
                   {featured.category}
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar size={12} /> {featured.date}
                 </span>
               </div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 md:mb-4 group-hover:text-[var(--primary)] transition-colors leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 md:mb-4 group-hover:text-[var(--primary-text)] transition-colors leading-tight">
                 {featured.title}
               </h2>
               <p className="text-[14px] md:text-[15px] text-[var(--muted)] leading-relaxed mb-4 md:mb-6">
                 {featured.excerpt}
               </p>
-              <span className="inline-flex items-center gap-2 font-semibold text-[var(--primary)] text-[14px]">
+              <span className="inline-flex items-center gap-2 font-semibold text-[var(--primary-text)] text-[14px]">
                 Đọc tiếp <ArrowRight size={16} />
               </span>
             </div>
@@ -91,13 +91,13 @@ export default function NewsIndexPage() {
                       <Clock size={12} /> {n.readTime}
                     </span>
                   </div>
-                  <h3 className="font-bold text-[16.5px] mb-2 group-hover:text-[var(--primary)] transition-colors leading-snug">
+                  <h3 className="font-bold text-[16.5px] mb-2 group-hover:text-[var(--primary-text)] transition-colors leading-snug">
                     {n.title}
                   </h3>
                   <p className="text-[13.5px] text-[var(--muted)] line-clamp-3 mb-4 flex-1">
                     {n.excerpt}
                   </p>
-                  <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--primary)]">
+                  <span className="inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--primary-text)]">
                     Đọc tiếp <ArrowRight size={13} />
                   </span>
                 </div>
